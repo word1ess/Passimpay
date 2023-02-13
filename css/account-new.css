@@ -1,0 +1,253 @@
+.content_menu_btn{
+    display: flex;
+    justify-content: center !important;
+    padding: 12px 12px;
+
+    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    /* У .content_menu_tags .span margin-bottom 10 и + здесь 5 */
+    margin: 5px 0px 0px;
+}
+
+.content_menu li .flex{
+    display: flex;
+    cursor: pointer;
+}
+
+
+.content_menu li.noactive a{
+    background: #F5F8FB;
+    border-radius: 20px;
+    padding: 0px;
+}
+
+.content_menu li.noactive{
+    background: #F5F8FB;
+    border-radius: 20px;
+    padding: 20px 20px 27px 20px;
+}
+
+.exchange-block{
+    display: none;
+}
+
+
+.transfer-block{
+    display: none;
+}
+
+.exchange-add{
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-left: 2px solid #FF3B2E;
+    border-radius: 3px;
+    padding: 13.5px 5px;
+}
+
+.exchange-add__tip{
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.exchange-add__img{
+    position: relative;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    flex: 0 0 14px;
+}
+
+.exchange-add__img *{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.exchange-add__btn{
+    max-width: 163px;
+}
+
+.exchange-choose{
+    display: flex;
+    gap: 10px;
+    border: 1px dashed #C6D6E6;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.exchange-choose__item{
+    border: none;
+    width: 173px;
+}
+.exchange-wrp_input{
+    padding: 0px;
+}
+.exchange-sum{
+    display: flex;
+    justify-content: space-between;
+}
+.exchange-sum__timer{
+    display: flex;
+    gap: 10px;
+}
+
+.content_menu li{
+    border-radius: 20px;
+    padding:20px 20px 10px 20px;
+    transition: all 300ms;
+}
+
+.content_menu li:hover,
+.content_menu li.active{
+background: #FFFFFF;
+box-shadow: 0px 15px 70px #DBE9F6;
+}
+
+.exchange-block-add{
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 3px;
+    padding: 13.5px 5px;
+}
+
+.exchange-block__qr{
+    width: 239px;
+    height: 239px;
+    background: #fff;
+}
+.exchange-add__tip-blue{
+    align-items: center;
+    gap: 9px;
+    background: #EDF6FF;
+    border-left: 2px solid #3399FF;
+}
+
+.exchange-block__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exchange-block__top .flex{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.exchange-block__top-animation.animation-playing{
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+
+
+.exchange-block__top-status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 210px;
+    height: 46px;
+    background: #FFFFFF;
+    border: 1px solid #9FA8B1;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.exchange-block__top-status.loading{
+    color: #3399FF;
+    background: #F0F8FF;
+    border: 1px solid #3399FF;
+}
+.exchange-block__top-status.success{
+    color: #33CC66;
+    background: #ECFFF9;
+    border: 1px solid #33CC66;
+}
+
+.exchange-block__bottom{
+    display: none;
+}
+
+.exchange-access__flex{
+    display: flex;
+    gap: 13px;
+    justify-content: space-between;
+    margin: 0px 0px 13px;
+}
+
+.exchange-access__white-bg{
+    padding: 5px 6px;
+    background: #fff;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 7.5px);
+
+}
+
+.exchange-access__white-bg p {
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+.exchange-block__btns{
+    display: flex;
+    gap: 10px;
+}
+
+.exchange-block__btns button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 calc(50% -5px);
+}
+
+ul li a{
+    color: #3399FF;
+    text-decoration: underline #3399FF;
+}
+
+.flex_between_center{
+    padding: 3px;
+}
+
+.flex_between_center.white{
+    background: #fff;
+}
