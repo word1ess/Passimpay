@@ -27,6 +27,14 @@
 </head>
 
 <body class="">
+	<svg display="none" style="display: none;">
+        <symbol id="loop-arrow" viewBox="0 0 38 39" fill="none">
+            <g>
+				<path d="M17.0275 27.1684L22.8076 21.0758C23.2597 20.5993 23.9904 20.5993 24.4425 21.0758C24.8946 21.5524 24.8946 22.3226 24.4425 22.7992L20.635 26.8125H25.9375C29.7636 26.8125 32.875 23.5328 32.875 19.5C32.875 15.4672 29.7636 12.1875 25.9375 12.1875H24.7813C24.1419 12.1875 23.625 11.6415 23.625 10.9688C23.625 10.296 24.1419 9.75 24.7813 9.75H25.9375C31.0377 9.75 35.1875 14.1241 35.1875 19.5C35.1875 24.8759 31.0377 29.25 25.9375 29.25H20.635L24.4425 33.2633C24.8946 33.7399 24.8946 34.5101 24.4425 34.9867C23.9904 35.4632 23.2597 35.4632 22.8076 34.9867L17.0275 28.8941C16.5788 28.4225 16.5754 27.6449 17.0275 27.1684Z"/>
+				<path d="M2.8125 19.4998C2.8125 14.1239 6.96228 9.74982 12.0625 9.74982H17.3651L13.5575 5.73647C13.1054 5.25994 13.1054 4.48969 13.5575 4.01316C14.0096 3.53663 14.7404 3.53663 15.1925 4.01316L20.9726 10.1057C21.4258 10.5834 21.4189 11.361 20.9726 11.8302L15.1925 17.9228C14.7404 18.3993 14.0096 18.3993 13.5575 17.9228C13.1054 17.4462 13.1054 16.676 13.5575 16.1994L17.3651 12.1873H12.0625C8.23647 12.1873 5.125 15.467 5.125 19.4998C5.125 23.5327 8.23647 26.8123 12.0625 26.8123H13.2188C13.8582 26.8123 14.375 27.3583 14.375 28.0311C14.375 28.7038 13.8582 29.2498 13.2188 29.2498H12.0625C6.96228 29.2498 2.8125 24.8757 2.8125 19.4998Z"/>
+            </g>
+        </symbol>
+    </svg>
 
 
 
@@ -2409,1094 +2417,1167 @@
 								<form id="withdrawform" action="/account/kumterbfcn/withdrawform" method="post">
 
 									<div class="wrp_withdraw">
-										<div class="mob_block_white flex-direction exchange-block">
-											<div class="wrp_border_title">
-												<div class="border_title">
-													<div class="fs-18 fw-700 ttu">Внутренний обмен</div>
+										<div>
+											<div class="mob_block_white flex-direction exchange-block">
+												<div class="wrp_border_title">
+													<div class="border_title">
+														<div class="fs-18 fw-700 ttu">Внутренний обмен</div>
+													</div>
+													<div class="inner_border_title exchange-block__title-row">
+														<a href="/account/transaction" class="exchange-block__soon btn_all_history">
+															<div class="content_menu_soon"><span>СКОРО</span></div>
+															На сторонний кошелек
+														</a>
+														<a href="/account/transaction" class="exchange-block__soon btn_all_history">
+															<div class="content_menu_soon"><span>СКОРО</span></div>
+															На карту
+														</a>
+														<a href="/account/transaction" class="exchange-block__soon btn_all_history">
+															<div class="content_menu_soon"><span>СКОРО</span></div>
+															На фиат
+														</a>
+													</div>
 												</div>
-												<div class="inner_border_title">
-													<a href="/account/transaction" class="btn_all_history"
-														style="--x:28.8438px; --y:-0.333344px;">На сторонний кошелек</a>
-														<a href="/account/transaction" class="btn_all_history"
-														style="--x:28.8438px; --y:-0.333344px;">На карту</a>
-														<a href="/account/transaction" class="btn_all_history"
-														style="--x:28.8438px; --y:-0.333344px;">На фиат</a>
-												</div>
-											</div>
-											<div class="border_block fg1">
-												<div class="p-20">
-													<div>
-														<div class="wrp_form">
-															<div class="wrp_input mb-20">
-																<div class="input_header">
-																	<div>Меняете</div>
-																	<div class="color-red">Мин..100.482394732 XRP</div>
-																</div>
-																<div class="select_currency_balance mb-5">
-																	<div class="currency_selected_balance">
-																		<div class="currency_selected_balance_left">
-																			<div class="icon"></div>
-																			<div>
-																				<div class="flex_center"><span class="name">Выбрать
-																						валюту из списка</span> <i
-																						style="display:none;"
-																						class="icon_tooltip tooltip ml-5"
-																						data-title="Что такое сеть? Это Блокчейн, в рамках которого выполняются транзакции определенной монеты."></i>
+												<div class="border_block fg1">
+													<div class="p-20">
+														<div>
+															<div class="wrp_form">
+																<div class="wrp_input mb-20">
+																	<div class="input_header">
+																		<div>Меняете</div>
+																		<div class="color-red">Мин..100.482394732 XRP</div>
+																	</div>
+																	<div class="select_currency_balance mb-5">
+																		<div class="currency_selected_balance">
+																			<div class="currency_selected_balance_left">
+																				<div class="icon"></div>
+																				<div>
+																					<div class="flex_center"><span class="name">Выбрать
+																							валюту из списка</span> <i
+																							style="display:none;"
+																							class="icon_tooltip tooltip ml-5"
+																							data-title="Что такое сеть? Это Блокчейн, в рамках которого выполняются транзакции определенной монеты."></i>
+																					</div>
+																					<div class="name2"></div>
 																				</div>
-																				<div class="name2"></div>
 																			</div>
+																			<div class="currency_selected_balance_arrow">
+																				<svg width="40" height="40" viewBox="0 0 40 40"
+																					fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<path
+																						d="M28.0406 18.7071C28.4311 18.3166 28.4311 17.6834 28.0406 17.2929C27.6501 16.9024 27.0169 16.9024 26.6264 17.2929L28.0406 18.7071ZM19.6668 25.6667L18.9597 26.3738C19.1473 26.5613 19.4016 26.6667 19.6668 26.6667C19.932 26.6667 20.1864 26.5613 20.3739 26.3738L19.6668 25.6667ZM12.7073 17.2929C12.3167 16.9024 11.6836 16.9024 11.2931 17.2929C10.9025 17.6834 10.9025 18.3166 11.2931 18.7071L12.7073 17.2929ZM26.6264 17.2929L18.9597 24.9596L20.3739 26.3738L28.0406 18.7071L26.6264 17.2929ZM20.3739 24.9596L12.7073 17.2929L11.2931 18.7071L18.9597 26.3738L20.3739 24.9596Z"
+																						fill="#3399FF" />
+																				</svg>
+																			</div>
+																			<input id="withdraw_ps" type="hidden" name="ps" value=""
+																				autocomplete="off" />
 																		</div>
-																		<div class="currency_selected_balance_arrow">
-																			<svg width="40" height="40" viewBox="0 0 40 40"
-																				fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<path
-																					d="M28.0406 18.7071C28.4311 18.3166 28.4311 17.6834 28.0406 17.2929C27.6501 16.9024 27.0169 16.9024 26.6264 17.2929L28.0406 18.7071ZM19.6668 25.6667L18.9597 26.3738C19.1473 26.5613 19.4016 26.6667 19.6668 26.6667C19.932 26.6667 20.1864 26.5613 20.3739 26.3738L19.6668 25.6667ZM12.7073 17.2929C12.3167 16.9024 11.6836 16.9024 11.2931 17.2929C10.9025 17.6834 10.9025 18.3166 11.2931 18.7071L12.7073 17.2929ZM26.6264 17.2929L18.9597 24.9596L20.3739 26.3738L28.0406 18.7071L26.6264 17.2929ZM20.3739 24.9596L12.7073 17.2929L11.2931 18.7071L18.9597 26.3738L20.3739 24.9596Z"
-																					fill="#3399FF" />
-																			</svg>
-																		</div>
-																		<input id="withdraw_ps" type="hidden" name="ps" value=""
-																			autocomplete="off" />
-																	</div>
-																	<div class="currency_list_balance">
-																		<div class="hide_zero_balance">
-																			<label>
-																				<div class="fs-14">Скрыть нулевые балансы</div>
-																				<input type="checkbox" value="1"
-																					autocomplete="off" />
-																				<div class="icon_checked"></div>
-																			</label>
-																		</div>
-																		<ul class="custom_scroll">
-			
-																			<li data-id="71" data-code="usdt" data-rate="1.00010000"
-																				data-blockchain="tron" data-platform="TRC20"
-																				data-balance="14106.62" data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdt.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/trc20.svg"
-																								alt="" />
+																		<div class="currency_list_balance">
+																			<div class="hide_zero_balance">
+																				<label>
+																					<div class="fs-14">Скрыть нулевые балансы</div>
+																					<input type="checkbox" value="1"
+																						autocomplete="off" />
+																					<div class="icon_checked"></div>
+																				</label>
+																			</div>
+																			<ul class="custom_scroll">
+				
+																				<li data-id="71" data-code="usdt" data-rate="1.00010000"
+																					data-blockchain="tron" data-platform="TRC20"
+																					data-balance="14106.62" data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdt.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/trc20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Tether (TRC20)</b>
 																						</div>
 																					</div>
-																					<div>
-																						<b>Tether (TRC20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_71">14,106.62</span>
-																							USDT</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_71">$14,108.03</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="10" data-code="btc"
-																				data-rate="23623.11230000" data-blockchain="bitcoin"
-																				data-platform="" data-balance="0.25743593"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/btc.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Bitcoin</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_10">0.25743593</span>
-																							BTC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_10">$6,081.44</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="20" data-code="eth"
-																				data-rate="1666.26750000" data-blockchain="eth"
-																				data-platform="" data-balance="0.39181120"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/eth.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Ethereum</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_20">0.39181120</span>
-																							ETH</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_20">$652.86</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="130" data-code="bnb"
-																				data-rate="332.34270000" data-blockchain="bsc"
-																				data-platform="" data-balance="1.37507807"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/bnb.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Binance Coin (BSC)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_130">1.37507807</span>
-																							BNB</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_130">$457.00</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="90" data-code="trx" data-rate="0.06390000"
-																				data-blockchain="tron" data-platform=""
-																				data-balance="2980.383302" data-accuracy="6"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/trx.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Tron</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_90">2,980.383302</span>
-																							TRX</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_90">$190.45</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="110" data-code="busd"
-																				data-rate="1.00030000" data-blockchain="eth"
-																				data-platform="ERC20" data-balance="16.357946"
-																				data-accuracy="6" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/busd.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/erc20.svg"
-																								alt="" />
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_71">14,106.62</span>
+																								USDT</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_71">$14,108.03</span>
 																						</div>
 																					</div>
-																					<div>
-																						<b>BUSD (ERC20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_110">16.357946</span>
-																							BUSD</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_110">$16.36</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="70" data-code="usdt" data-rate="1.00010000"
-																				data-blockchain="eth" data-platform="ERC20"
-																				data-balance="14.986037" data-accuracy="6"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdt.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/erc20.svg"
-																								alt="" />
+																				</li>
+				
+																				<li data-id="10" data-code="btc"
+																					data-rate="23623.11230000" data-blockchain="bitcoin"
+																					data-platform="" data-balance="0.25743593"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/btc.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Bitcoin</b>
 																						</div>
 																					</div>
-																					<div>
-																						<b>Tether (ERC20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_70">14.986037</span>
-																							USDT</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_70">$14.99</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="50" data-code="bch"
-																				data-rate="139.09130000"
-																				data-blockchain="bitcoincash" data-platform=""
-																				data-balance="0.09005775" data-accuracy="8"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/bch.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Bitcoin Cash</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_50">0.09005775</span>
-																							BCH</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_50">$12.53</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="40" data-code="doge" data-rate="0.09230000"
-																				data-blockchain="dogecoin" data-platform=""
-																				data-balance="128.99774000" data-accuracy="8"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/doge.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Dogecoin</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_40">128.99774000</span>
-																							DOGE</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_40">$11.91</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="30" data-code="ltc" data-rate="99.21100000"
-																				data-blockchain="litecoin" data-platform=""
-																				data-balance="0.11999859" data-accuracy="8"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/ltc.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Litecoin</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_30">0.11999859</span>
-																							LTC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_30">$11.90</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="100" data-code="usdc"
-																				data-rate="1.00000000" data-blockchain="eth"
-																				data-platform="ERC20" data-balance="8.00"
-																				data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdc.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/erc20.svg"
-																								alt="" />
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_10">0.25743593</span>
+																								BTC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_10">$6,081.44</span>
 																						</div>
 																					</div>
-																					<div>
-																						<b>USD Coin (ERC20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_100">8.00</span>
-																							USDC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_100">$8.00</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="72" data-code="usdt" data-rate="1.00010000"
-																				data-blockchain="bsc" data-platform="BEP20"
-																				data-balance="6.56" data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdt.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
+																				</li>
+				
+																				<li data-id="20" data-code="eth"
+																					data-rate="1666.26750000" data-blockchain="eth"
+																					data-platform="" data-balance="0.39181120"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/eth.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Ethereum</b>
 																						</div>
 																					</div>
-																					<div>
-																						<b>Tether (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_72">6.56</span>
-																							USDT</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_72">$6.56</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="203" data-code="busd"
-																				data-rate="1.00030000" data-blockchain="bsc"
-																				data-platform="BEP20" data-balance="3.24"
-																				data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/busd.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_20">0.39181120</span>
+																								ETH</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_20">$652.86</span>
 																						</div>
 																					</div>
-																					<div>
-																						<b>BUSD (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_203">3.24</span>
-																							BUSD</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_203">$3.24</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="202" data-code="eth"
-																				data-rate="1666.26750000" data-blockchain="bsc"
-																				data-platform="BEP20" data-balance="0.00159907"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/eth.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
+																				</li>
+				
+																				<li data-id="130" data-code="bnb"
+																					data-rate="332.34270000" data-blockchain="bsc"
+																					data-platform="" data-balance="1.37507807"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/bnb.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Binance Coin (BSC)</b>
 																						</div>
 																					</div>
-																					<div>
-																						<b>Ethereum (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_202">0.00159907</span>
-																							ETH</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_202">$2.66</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="101" data-code="usdc"
-																				data-rate="1.00000000" data-blockchain="bsc"
-																				data-platform="BEP20" data-balance="2.48"
-																				data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdc.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_130">1.37507807</span>
+																								BNB</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_130">$457.00</span>
 																						</div>
 																					</div>
-																					<div>
-																						<b>USD Coin (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_101">2.48</span>
-																							USDC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_101">$2.48</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="201" data-code="btc"
-																				data-rate="23623.11230000" data-blockchain="bsc"
-																				data-platform="BEP20" data-balance="0.00009728"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/btc.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
+																				</li>
+				
+																				<li data-id="90" data-code="trx" data-rate="0.06390000"
+																					data-blockchain="tron" data-platform=""
+																					data-balance="2980.383302" data-accuracy="6"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/trx.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Tron</b>
 																						</div>
 																					</div>
-																					<div>
-																						<b>Bitcoin (BEP20)</b>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_90">2,980.383302</span>
+																								TRX</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_90">$190.45</span>
+																						</div>
 																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_201">0.00009728</span>
-																							BTC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_201">$2.30</span>
+																				</li>
+				
+																				<li data-id="110" data-code="busd"
+																					data-rate="1.00030000" data-blockchain="eth"
+																					data-platform="ERC20" data-balance="16.357946"
+																					data-accuracy="6" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/busd.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/erc20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>BUSD (ERC20)</b>
+																						</div>
 																					</div>
-																				</div>
-																			</li>
-																		</ul>
-																	</div>
-																</div>
-																<div class="hr2 mb-15"></div>
-																<div class="fs-14 color-orange mb-10 ">Комиссия внутри сервиса
-																	отсутствует.</div>
-																<div class="exchange-add mb-10 ">
-																	<div class="exchange-add__tip">
-																		<div class="exchange-add__img">
-																			<img src="svg/tip-red.svg" alt="tip-red">
-																		</div>
-																		<p class="color-red fw-500">У вас недостаточно средств</p>
-																	</div>
-																	<button class="exchange-add__btn btn2" href="#">Пополнить
-																		счет</button>
-																</div>
-																<div class="exchange-choose mb-10">
-																	<button class="exchange-choose__item">Мин</button>
-																	<button class="exchange-choose__item btn2">Пол</button>
-																	<button class="exchange-choose__item">Все</button>
-																</div>
-																<div class="wrp_input exchange-wrp_input mb-10">
-																	<div class="input_header">
-																		<div class="color-gray">Сумма</div>
-																	</div>
-			
-																	<div class="input_inner input_rate_inner mb-5">
-																		<div class="input_rate">
-																			<span></span>
-																			<span></span>
-																		</div>
-																		<input id="withdraw_amount"
-																			class="inputrate input_left_orange" type="number"
-																			max="10000000" step="0.000000000000000001" name="amount"
-																			value="" autocomplete="off" placeholder="Введите сумму"
-																			required="">
-																		<button type="button" class="btn_amount_max">MAX</button>
-																	</div>
-			
-																	<div class="color-red fs-14 insufficient_funds"
-																		style="display:none;">Недостаточно средств</div>
-			
-																</div>
-																<div class="wrp_input exchange-wrp_input">
-			
-																	<div class="input_header">
-																		<div class="color-gray">Сумма, которая спишется с Вашего
-																			кошелька
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_110">16.357946</span>
+																								BUSD</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_110">$16.36</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="70" data-code="usdt" data-rate="1.00010000"
+																					data-blockchain="eth" data-platform="ERC20"
+																					data-balance="14.986037" data-accuracy="6"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdt.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/erc20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Tether (ERC20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_70">14.986037</span>
+																								USDT</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_70">$14.99</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="50" data-code="bch"
+																					data-rate="139.09130000"
+																					data-blockchain="bitcoincash" data-platform=""
+																					data-balance="0.09005775" data-accuracy="8"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/bch.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Bitcoin Cash</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_50">0.09005775</span>
+																								BCH</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_50">$12.53</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="40" data-code="doge" data-rate="0.09230000"
+																					data-blockchain="dogecoin" data-platform=""
+																					data-balance="128.99774000" data-accuracy="8"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/doge.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Dogecoin</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_40">128.99774000</span>
+																								DOGE</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_40">$11.91</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="30" data-code="ltc" data-rate="99.21100000"
+																					data-blockchain="litecoin" data-platform=""
+																					data-balance="0.11999859" data-accuracy="8"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/ltc.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Litecoin</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_30">0.11999859</span>
+																								LTC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_30">$11.90</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="100" data-code="usdc"
+																					data-rate="1.00000000" data-blockchain="eth"
+																					data-platform="ERC20" data-balance="8.00"
+																					data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdc.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/erc20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>USD Coin (ERC20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_100">8.00</span>
+																								USDC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_100">$8.00</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="72" data-code="usdt" data-rate="1.00010000"
+																					data-blockchain="bsc" data-platform="BEP20"
+																					data-balance="6.56" data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdt.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Tether (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_72">6.56</span>
+																								USDT</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_72">$6.56</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="203" data-code="busd"
+																					data-rate="1.00030000" data-blockchain="bsc"
+																					data-platform="BEP20" data-balance="3.24"
+																					data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/busd.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>BUSD (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_203">3.24</span>
+																								BUSD</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_203">$3.24</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="202" data-code="eth"
+																					data-rate="1666.26750000" data-blockchain="bsc"
+																					data-platform="BEP20" data-balance="0.00159907"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/eth.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Ethereum (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_202">0.00159907</span>
+																								ETH</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_202">$2.66</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="101" data-code="usdc"
+																					data-rate="1.00000000" data-blockchain="bsc"
+																					data-platform="BEP20" data-balance="2.48"
+																					data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdc.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>USD Coin (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_101">2.48</span>
+																								USDC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_101">$2.48</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="201" data-code="btc"
+																					data-rate="23623.11230000" data-blockchain="bsc"
+																					data-platform="BEP20" data-balance="0.00009728"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/btc.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Bitcoin (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_201">0.00009728</span>
+																								BTC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_201">$2.30</span>
+																						</div>
+																					</div>
+																				</li>
+																			</ul>
 																		</div>
 																	</div>
-			
-																	<div class="wrp_withdraw_rate_usd mb-5">
-																		<div class="input_inner input_rate_inner">
+																	<div class="hr2 mb-15"></div>
+																	<div class="fs-14 color-orange mb-10 ">Комиссия внутри сервиса
+																		отсутствует.</div>
+																	<div class="exchange-add mb-10 ">
+																		<div class="exchange-add__tip">
+																			<div class="exchange-add__img">
+																				<img src="svg/tip-red.svg" alt="tip-red">
+																			</div>
+																			<p class="color-red fw-500">У вас недостаточно средств</p>
+																		</div>
+																		<button class="exchange-add__btn btn2" href="#">Пополнить
+																			счет</button>
+																	</div>
+																	<div class="exchange-choose mb-10">
+																		<button class="exchange-choose__item">Мин</button>
+																		<button class="exchange-choose__item btn2">Пол</button>
+																		<button class="exchange-choose__item">Все</button>
+																	</div>
+																	<div class="wrp_input exchange-wrp_input mb-10">
+																		<div class="input_header">
+																			<div class="color-gray">Сумма</div>
+																		</div>
+				
+																		<div class="input_inner input_rate_inner mb-5">
 																			<div class="input_rate">
 																				<span></span>
 																				<span></span>
 																			</div>
-																			<input id="withdraw_amount2"
+																			<input id="withdraw_amount"
 																				class="inputrate input_left_orange" type="number"
-																				max="10000000" step="0.000000000000000001"
-																				name="amount2" value="" autocomplete="off"
-																				placeholder="Введите сумму" required="">
+																				max="10000000" step="0.000000000000000001" name="amount"
+																				value="" autocomplete="off" placeholder="Введите сумму"
+																				required="">
+																			<button type="button" class="btn_amount_max">MAX</button>
 																		</div>
-			
-																		<div class="input_inner input_rate_inner">
-																			<div class="wrp_withdraw_usd">
-																				<input id="withdraw_usd" type="number" value=""
-																					autocomplete="off" step="0.000000000000000001">
+				
+																		<div class="color-red fs-14 insufficient_funds"
+																			style="display:none;">Недостаточно средств</div>
+				
+																	</div>
+																	<div class="wrp_input exchange-wrp_input">
+				
+																		<div class="input_header">
+																			<div class="color-gray">Сумма, которая спишется с Вашего
+																				кошелька
 																			</div>
 																		</div>
-																	</div>
-			
-																</div>
-															</div>
-															<div class="wrp_input mb-20">
-																<div class="input_header">
-																	<div>Получаете</div>
-																</div>
-																<div class="select_currency_balance mb-5">
-																	<div class="currency_selected_balance">
-																		<div class="currency_selected_balance_left">
-																			<div class="icon"></div>
-																			<div>
-																				<div class="flex_center"><span class="name">Выбрать
-																						валюту из списка</span> <i
-																						style="display:none;"
-																						class="icon_tooltip tooltip ml-5"
-																						data-title="Что такое сеть? Это Блокчейн, в рамках которого выполняются транзакции определенной монеты."></i>
+				
+																		<div class="wrp_withdraw_rate_usd mb-5">
+																			<div class="input_inner input_rate_inner">
+																				<div class="input_rate">
+																					<span></span>
+																					<span></span>
 																				</div>
-																				<div class="name2"></div>
+																				<input id="withdraw_amount2"
+																					class="inputrate input_left_orange" type="number"
+																					max="10000000" step="0.000000000000000001"
+																					name="amount2" value="" autocomplete="off"
+																					placeholder="Введите сумму" required="">
+																			</div>
+				
+																			<div class="input_inner input_rate_inner">
+																				<div class="wrp_withdraw_usd">
+																					<input id="withdraw_usd" type="number" value=""
+																						autocomplete="off" step="0.000000000000000001">
+																				</div>
 																			</div>
 																		</div>
-																		<div class="currency_selected_balance_arrow">
-																			<svg width="40" height="40" viewBox="0 0 40 40"
-																				fill="none" xmlns="http://www.w3.org/2000/svg">
-																				<path
-																					d="M28.0406 18.7071C28.4311 18.3166 28.4311 17.6834 28.0406 17.2929C27.6501 16.9024 27.0169 16.9024 26.6264 17.2929L28.0406 18.7071ZM19.6668 25.6667L18.9597 26.3738C19.1473 26.5613 19.4016 26.6667 19.6668 26.6667C19.932 26.6667 20.1864 26.5613 20.3739 26.3738L19.6668 25.6667ZM12.7073 17.2929C12.3167 16.9024 11.6836 16.9024 11.2931 17.2929C10.9025 17.6834 10.9025 18.3166 11.2931 18.7071L12.7073 17.2929ZM26.6264 17.2929L18.9597 24.9596L20.3739 26.3738L28.0406 18.7071L26.6264 17.2929ZM20.3739 24.9596L12.7073 17.2929L11.2931 18.7071L18.9597 26.3738L20.3739 24.9596Z"
-																					fill="#3399FF" />
-																			</svg>
-																		</div>
-																		<input id="withdraw_ps" type="hidden" name="ps" value=""
-																			autocomplete="off" />
-																	</div>
-																	<div class="currency_list_balance">
-																		<div class="hide_zero_balance">
-																			<label>
-																				<div class="fs-14">Скрыть нулевые балансы</div>
-																				<input type="checkbox" value="1"
-																					autocomplete="off" />
-																				<div class="icon_checked"></div>
-																			</label>
-																		</div>
-																		<ul class="custom_scroll">
-			
-																			<li data-id="71" data-code="usdt" data-rate="1.00010000"
-																				data-blockchain="tron" data-platform="TRC20"
-																				data-balance="14106.62" data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdt.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/trc20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>Tether (TRC20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_71">14,106.62</span>
-																							USDT</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_71">$14,108.03</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="10" data-code="btc"
-																				data-rate="23623.11230000" data-blockchain="bitcoin"
-																				data-platform="" data-balance="0.25743593"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/btc.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Bitcoin</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_10">0.25743593</span>
-																							BTC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_10">$6,081.44</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="20" data-code="eth"
-																				data-rate="1666.26750000" data-blockchain="eth"
-																				data-platform="" data-balance="0.39181120"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/eth.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Ethereum</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_20">0.39181120</span>
-																							ETH</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_20">$652.86</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="130" data-code="bnb"
-																				data-rate="332.34270000" data-blockchain="bsc"
-																				data-platform="" data-balance="1.37507807"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/bnb.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Binance Coin (BSC)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_130">1.37507807</span>
-																							BNB</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_130">$457.00</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="90" data-code="trx" data-rate="0.06390000"
-																				data-blockchain="tron" data-platform=""
-																				data-balance="2980.383302" data-accuracy="6"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/trx.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Tron</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_90">2,980.383302</span>
-																							TRX</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_90">$190.45</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="110" data-code="busd"
-																				data-rate="1.00030000" data-blockchain="eth"
-																				data-platform="ERC20" data-balance="16.357946"
-																				data-accuracy="6" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/busd.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/erc20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>BUSD (ERC20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_110">16.357946</span>
-																							BUSD</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_110">$16.36</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="70" data-code="usdt" data-rate="1.00010000"
-																				data-blockchain="eth" data-platform="ERC20"
-																				data-balance="14.986037" data-accuracy="6"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdt.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/erc20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>Tether (ERC20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_70">14.986037</span>
-																							USDT</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_70">$14.99</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="50" data-code="bch"
-																				data-rate="139.09130000"
-																				data-blockchain="bitcoincash" data-platform=""
-																				data-balance="0.09005775" data-accuracy="8"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/bch.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Bitcoin Cash</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_50">0.09005775</span>
-																							BCH</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_50">$12.53</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="40" data-code="doge" data-rate="0.09230000"
-																				data-blockchain="dogecoin" data-platform=""
-																				data-balance="128.99774000" data-accuracy="8"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/doge.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Dogecoin</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_40">128.99774000</span>
-																							DOGE</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_40">$11.91</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="30" data-code="ltc" data-rate="99.21100000"
-																				data-blockchain="litecoin" data-platform=""
-																				data-balance="0.11999859" data-accuracy="8"
-																				class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/ltc.svg" alt="" />
-																					</div>
-																					<div>
-																						<b>Litecoin</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_30">0.11999859</span>
-																							LTC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_30">$11.90</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="100" data-code="usdc"
-																				data-rate="1.00000000" data-blockchain="eth"
-																				data-platform="ERC20" data-balance="8.00"
-																				data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdc.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/erc20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>USD Coin (ERC20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_100">8.00</span>
-																							USDC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_100">$8.00</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="72" data-code="usdt" data-rate="1.00010000"
-																				data-blockchain="bsc" data-platform="BEP20"
-																				data-balance="6.56" data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdt.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>Tether (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_72">6.56</span>
-																							USDT</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_72">$6.56</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="203" data-code="busd"
-																				data-rate="1.00030000" data-blockchain="bsc"
-																				data-platform="BEP20" data-balance="3.24"
-																				data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/busd.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>BUSD (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_203">3.24</span>
-																							BUSD</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_203">$3.24</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="202" data-code="eth"
-																				data-rate="1666.26750000" data-blockchain="bsc"
-																				data-platform="BEP20" data-balance="0.00159907"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/eth.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>Ethereum (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_202">0.00159907</span>
-																							ETH</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_202">$2.66</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="101" data-code="usdc"
-																				data-rate="1.00000000" data-blockchain="bsc"
-																				data-platform="BEP20" data-balance="2.48"
-																				data-accuracy="2" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/usdc.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>USD Coin (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_101">2.48</span>
-																							USDC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_101">$2.48</span>
-																					</div>
-																				</div>
-																			</li>
-			
-																			<li data-id="201" data-code="btc"
-																				data-rate="23623.11230000" data-blockchain="bsc"
-																				data-platform="BEP20" data-balance="0.00009728"
-																				data-accuracy="8" class=" ">
-																				<div class="currency_list_balance_left">
-																					<div class="balance_icon">
-																						<img src="svg/currency/btc.svg" alt="" />
-																						<div class="currency_icon_net">
-																							<img src="svg/currency/bep20.svg"
-																								alt="" />
-																						</div>
-																					</div>
-																					<div>
-																						<b>Bitcoin (BEP20)</b>
-																					</div>
-																				</div>
-																				<div class="tar">
-																					<div><b class="list_name"><span
-																								class="balance_201">0.00009728</span>
-																							BTC</b></div>
-																					<div class="list_name2 color-gray"><span
-																							class="balance_rate_201">$2.30</span>
-																					</div>
-																				</div>
-																			</li>
-																		</ul>
+				
 																	</div>
 																</div>
-																<div class="hr2 mb-15"></div>
-			
-																<div class="exchange-sum">
-																	<p>Ожидаемая сумма</p>
-																	<div class="exchange-sum__timer">
-																		<p>Курс: 1 BTC = 17350.83 USDT</p>
-																		<p id="timer"></p>
-																	</div>
+																<div class="exchange__btn-exchange">
+																	<svg width="38" height="39">
+																		<use xlink:href="#loop-arrow"></use>
+																	</svg>
 																</div>
-																<div class="wrp_input exchange-wrp_input mb-10">
+																<div class="wrp_input mb-20">
 																	<div class="input_header">
-																		<div class="color-gray">Сумма</div>
+																		<div>Получаете</div>
 																	</div>
-			
-																	<div class="input_inner input_rate_inner mb-5">
-																		<div class="input_rate">
-																			<span></span>
-																			<span></span>
+																	<div class="select_currency_balance mb-5">
+																		<div class="currency_selected_balance">
+																			<div class="currency_selected_balance_left">
+																				<div class="icon"></div>
+																				<div>
+																					<div class="flex_center"><span class="name">Выбрать
+																							валюту из списка</span> <i
+																							style="display:none;"
+																							class="icon_tooltip tooltip ml-5"
+																							data-title="Что такое сеть? Это Блокчейн, в рамках которого выполняются транзакции определенной монеты."></i>
+																					</div>
+																					<div class="name2"></div>
+																				</div>
+																			</div>
+																			<div class="currency_selected_balance_arrow">
+																				<svg width="40" height="40" viewBox="0 0 40 40"
+																					fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<path
+																						d="M28.0406 18.7071C28.4311 18.3166 28.4311 17.6834 28.0406 17.2929C27.6501 16.9024 27.0169 16.9024 26.6264 17.2929L28.0406 18.7071ZM19.6668 25.6667L18.9597 26.3738C19.1473 26.5613 19.4016 26.6667 19.6668 26.6667C19.932 26.6667 20.1864 26.5613 20.3739 26.3738L19.6668 25.6667ZM12.7073 17.2929C12.3167 16.9024 11.6836 16.9024 11.2931 17.2929C10.9025 17.6834 10.9025 18.3166 11.2931 18.7071L12.7073 17.2929ZM26.6264 17.2929L18.9597 24.9596L20.3739 26.3738L28.0406 18.7071L26.6264 17.2929ZM20.3739 24.9596L12.7073 17.2929L11.2931 18.7071L18.9597 26.3738L20.3739 24.9596Z"
+																						fill="#3399FF" />
+																				</svg>
+																			</div>
+																			<input id="withdraw_ps" type="hidden" name="ps" value=""
+																				autocomplete="off" />
 																		</div>
-																		<input id="withdraw_amount"
-																			class="inputrate input_left_orange" type="number"
-																			max="10000000" step="0.000000000000000001" name="amount"
-																			value="" autocomplete="off" placeholder="Введите сумму"
-																			required="">
-																		<button type="button" class="btn_amount_max">MAX</button>
-																	</div>
-			
-																	<div class="color-red fs-14 insufficient_funds"
-																		style="display:none;">Недостаточно средств</div>
-			
-																</div>
-																<div class="wrp_input exchange-wrp_input">
-			
-																	<div class="input_header">
-																		<div class="color-gray">Сумма, которая спишется с Вашего
-																			кошелька
+																		<div class="currency_list_balance">
+																			<div class="hide_zero_balance">
+																				<label>
+																					<div class="fs-14">Скрыть нулевые балансы</div>
+																					<input type="checkbox" value="1"
+																						autocomplete="off" />
+																					<div class="icon_checked"></div>
+																				</label>
+																			</div>
+																			<ul class="custom_scroll">
+				
+																				<li data-id="71" data-code="usdt" data-rate="1.00010000"
+																					data-blockchain="tron" data-platform="TRC20"
+																					data-balance="14106.62" data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdt.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/trc20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Tether (TRC20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_71">14,106.62</span>
+																								USDT</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_71">$14,108.03</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="10" data-code="btc"
+																					data-rate="23623.11230000" data-blockchain="bitcoin"
+																					data-platform="" data-balance="0.25743593"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/btc.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Bitcoin</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_10">0.25743593</span>
+																								BTC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_10">$6,081.44</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="20" data-code="eth"
+																					data-rate="1666.26750000" data-blockchain="eth"
+																					data-platform="" data-balance="0.39181120"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/eth.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Ethereum</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_20">0.39181120</span>
+																								ETH</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_20">$652.86</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="130" data-code="bnb"
+																					data-rate="332.34270000" data-blockchain="bsc"
+																					data-platform="" data-balance="1.37507807"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/bnb.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Binance Coin (BSC)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_130">1.37507807</span>
+																								BNB</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_130">$457.00</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="90" data-code="trx" data-rate="0.06390000"
+																					data-blockchain="tron" data-platform=""
+																					data-balance="2980.383302" data-accuracy="6"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/trx.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Tron</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_90">2,980.383302</span>
+																								TRX</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_90">$190.45</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="110" data-code="busd"
+																					data-rate="1.00030000" data-blockchain="eth"
+																					data-platform="ERC20" data-balance="16.357946"
+																					data-accuracy="6" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/busd.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/erc20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>BUSD (ERC20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_110">16.357946</span>
+																								BUSD</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_110">$16.36</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="70" data-code="usdt" data-rate="1.00010000"
+																					data-blockchain="eth" data-platform="ERC20"
+																					data-balance="14.986037" data-accuracy="6"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdt.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/erc20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Tether (ERC20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_70">14.986037</span>
+																								USDT</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_70">$14.99</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="50" data-code="bch"
+																					data-rate="139.09130000"
+																					data-blockchain="bitcoincash" data-platform=""
+																					data-balance="0.09005775" data-accuracy="8"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/bch.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Bitcoin Cash</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_50">0.09005775</span>
+																								BCH</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_50">$12.53</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="40" data-code="doge" data-rate="0.09230000"
+																					data-blockchain="dogecoin" data-platform=""
+																					data-balance="128.99774000" data-accuracy="8"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/doge.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Dogecoin</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_40">128.99774000</span>
+																								DOGE</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_40">$11.91</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="30" data-code="ltc" data-rate="99.21100000"
+																					data-blockchain="litecoin" data-platform=""
+																					data-balance="0.11999859" data-accuracy="8"
+																					class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/ltc.svg" alt="" />
+																						</div>
+																						<div>
+																							<b>Litecoin</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_30">0.11999859</span>
+																								LTC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_30">$11.90</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="100" data-code="usdc"
+																					data-rate="1.00000000" data-blockchain="eth"
+																					data-platform="ERC20" data-balance="8.00"
+																					data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdc.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/erc20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>USD Coin (ERC20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_100">8.00</span>
+																								USDC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_100">$8.00</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="72" data-code="usdt" data-rate="1.00010000"
+																					data-blockchain="bsc" data-platform="BEP20"
+																					data-balance="6.56" data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdt.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Tether (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_72">6.56</span>
+																								USDT</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_72">$6.56</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="203" data-code="busd"
+																					data-rate="1.00030000" data-blockchain="bsc"
+																					data-platform="BEP20" data-balance="3.24"
+																					data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/busd.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>BUSD (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_203">3.24</span>
+																								BUSD</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_203">$3.24</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="202" data-code="eth"
+																					data-rate="1666.26750000" data-blockchain="bsc"
+																					data-platform="BEP20" data-balance="0.00159907"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/eth.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Ethereum (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_202">0.00159907</span>
+																								ETH</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_202">$2.66</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="101" data-code="usdc"
+																					data-rate="1.00000000" data-blockchain="bsc"
+																					data-platform="BEP20" data-balance="2.48"
+																					data-accuracy="2" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/usdc.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>USD Coin (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_101">2.48</span>
+																								USDC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_101">$2.48</span>
+																						</div>
+																					</div>
+																				</li>
+				
+																				<li data-id="201" data-code="btc"
+																					data-rate="23623.11230000" data-blockchain="bsc"
+																					data-platform="BEP20" data-balance="0.00009728"
+																					data-accuracy="8" class=" ">
+																					<div class="currency_list_balance_left">
+																						<div class="balance_icon">
+																							<img src="svg/currency/btc.svg" alt="" />
+																							<div class="currency_icon_net">
+																								<img src="svg/currency/bep20.svg"
+																									alt="" />
+																							</div>
+																						</div>
+																						<div>
+																							<b>Bitcoin (BEP20)</b>
+																						</div>
+																					</div>
+																					<div class="tar">
+																						<div><b class="list_name"><span
+																									class="balance_201">0.00009728</span>
+																								BTC</b></div>
+																						<div class="list_name2 color-gray"><span
+																								class="balance_rate_201">$2.30</span>
+																						</div>
+																					</div>
+																				</li>
+																			</ul>
 																		</div>
 																	</div>
-			
-																	<div class="wrp_withdraw_rate_usd mb-5">
-																		<div class="input_inner input_rate_inner">
+																	<div class="hr2 mb-15"></div>
+				
+																	<div class="exchange-sum">
+																		<p>Ожидаемая сумма</p>
+																		<div class="exchange-sum__timer">
+																			<p>Курс: 1 BTC = 17350.83 USDT</p>
+																			<p id="timer"></p>
+																		</div>
+																	</div>
+																	<div class="wrp_input exchange-wrp_input mb-10">
+																		<div class="input_header">
+																			<div class="color-gray">Сумма</div>
+																		</div>
+				
+																		<div class="input_inner input_rate_inner mb-5">
 																			<div class="input_rate">
 																				<span></span>
 																				<span></span>
 																			</div>
-																			<input id="withdraw_amount2"
+																			<input id="withdraw_amount"
 																				class="inputrate input_left_orange" type="number"
-																				max="10000000" step="0.000000000000000001"
-																				name="amount2" value="" autocomplete="off"
-																				placeholder="Введите сумму" required="">
+																				max="10000000" step="0.000000000000000001" name="amount"
+																				value="" autocomplete="off" placeholder="Введите сумму"
+																				required="">
+																			<button type="button" class="btn_amount_max">MAX</button>
 																		</div>
-			
-																		<div class="input_inner input_rate_inner">
-																			<div class="wrp_withdraw_usd">
-																				<input id="withdraw_usd" type="number" value=""
-																					autocomplete="off" step="0.000000000000000001">
+				
+																		<div class="color-red fs-14 insufficient_funds"
+																			style="display:none;">Недостаточно средств</div>
+				
+																	</div>
+																	<div class="wrp_input exchange-wrp_input">
+				
+																		<div class="input_header">
+																			<div class="color-gray">Сумма, которая спишется с Вашего
+																				кошелька
+																			</div>
+																		</div>
+				
+																		<div class="wrp_withdraw_rate_usd mb-5">
+																			<div class="input_inner input_rate_inner">
+																				<div class="input_rate">
+																					<span></span>
+																					<span></span>
+																				</div>
+																				<input id="withdraw_amount2"
+																					class="inputrate input_left_orange" type="number"
+																					max="10000000" step="0.000000000000000001"
+																					name="amount2" value="" autocomplete="off"
+																					placeholder="Введите сумму" required="">
+																			</div>
+				
+																			<div class="input_inner input_rate_inner">
+																				<div class="wrp_withdraw_usd">
+																					<input id="withdraw_usd" type="number" value=""
+																						autocomplete="off" step="0.000000000000000001">
+																				</div>
+																			</div>
+																		</div>
+				
+																	</div>
+																</div>
+																<div class="error_withdraw fs-14 color-red mb-10"></div>
+																<input type="hidden" name="_csrf_token"
+																	value="5ee1d5666af5e3dc60434a01eb.maAKfTr3wkySAtjwV5HXkqLspTjE13XWx1ToIhVdnPY.zchiOAnHly7zepqYNPCFwf2Z_Hmcpxi0jWeySCI3qLX1l3ATeLGNCf9buw" />
+																<input type="hidden" name="code3" value="" />
+															</div>
+														</div>
+	
+													</div>
+												</div>
+											</div>
+											<div class="exchange-block">
+												<div class="exchange-block__top mb-20">
+													<div class="flex">
+														<div class="exchange-block__top-status color-gray">
+															Ожидание депозита
+														</div>
+														<div class="exchange-block__top-animation animation-playing follow-the-leader"><div></div><div></div><div></div><div></div><div></div></div>
+													</div>
+													<div id="exchange-id" class="copy">
+														<div class="fs-14 color-gray">
+															Индентификатор ордера: <span style="color: #000;">nfkzRb4UhY</span>
+														</div>
+														<div class="copy_icon tooltip" data-title="Скопировать">
+														</div>
+													</div>
+												</div>
+												<div class="exchange-block__bottom">
+													<div class="wrp_form">
+														<div class="wrp_input mb-20">
+															<div class="input_header">
+																<div>Кошелек</div>
+															</div>
+	
+															<div class="select_currency_balance">
+																<div class="currency_selected_balance">
+																	<div class="currency_selected_balance_left">
+																		<div class="icon">
+																			<div class="balance_icon">
+																				<img src="svg/currency/0xbtc.svg" alt="">
+																			</div>
+																		</div>
+																		<div>
+																			<div class="name"><span
+																					class="balance_10">0.00000000</span> BTC
+																			</div>
+																			<div class="name2"><span
+																					class="balance_rate_10">$0.00</span>
 																			</div>
 																		</div>
 																	</div>
-			
+																	<input id="deposit_ps" type="hidden" name="ps"
+																		value="10" autocomplete="off">
 																</div>
 															</div>
-															<div class="error_withdraw fs-14 color-red mb-10"></div>
-															<input type="hidden" name="_csrf_token"
-																value="5ee1d5666af5e3dc60434a01eb.maAKfTr3wkySAtjwV5HXkqLspTjE13XWx1ToIhVdnPY.zchiOAnHly7zepqYNPCFwf2Z_Hmcpxi0jWeySCI3qLX1l3ATeLGNCf9buw" />
-															<input type="hidden" name="code3" value="" />
 														</div>
-													</div>
-
-												</div>
-											</div>
-										</div>
-										<div class="exchange-block">
-											<div class="exchange-block__top mb-20">
-												<div class="flex">
-													<div class="exchange-block__top-status color-gray">
-														Ожидание депозита
-													</div>
-													<div class="exchange-block__top-animation animation-playing">
-														<img src="svg/loading.svg" alt="">
-													</div>
-												</div>
-												<div id="exchange-id" class="copy">
-													<div class="fs-14 color-gray">
-														Индентификатор ордера: <span style="color: #000;">nfkzRb4UhY</span>
-													</div>
-													<div class="copy_icon tooltip" data-title="Скопировать">
-													</div>
-												</div>
-											</div>
-											<div class="exchange-block__bottom">
-												<div class="wrp_form">
-													<div class="wrp_input mb-20">
-														<div class="input_header">
-															<div>Кошелек</div>
-														</div>
-
-														<div class="select_currency_balance">
-															<div class="currency_selected_balance">
-																<div class="currency_selected_balance_left">
-																	<div class="icon">
-																		<div class="balance_icon">
-																			<img src="svg/currency/0xbtc.svg" alt="">
-																		</div>
+														<div id="dep_info" class="wrp_input" style="display: block;">
+															<div class="exchange-block-add mb-10 ">
+																<div class="exchange-add__tip">
+																	<div class="exchange-add__img">
+																		<img src="svg/tip-green.svg" alt="tip-green">
 																	</div>
-																	<div>
-																		<div class="name"><span
-																				class="balance_10">0.00000000</span> BTC
-																		</div>
-																		<div class="name2"><span
-																				class="balance_rate_10">$0.00</span>
-																		</div>
+																	<p class="color-green"><span class="fw-500">Комиссия
+																			0.00053180 ETH ($0.84)</span><br />
+																		Будет вычтена из пришедшей суммы.</p>
+																</div>
+															</div>
+															<div class="color-gray mb-20">Пожалуйста, внесите средства <span
+																	style="color: #000;">100.2938172823</span> XRP в ERC20
+																сети по следующему адресу:</div>
+															<div class="tac mb-20 exchange-block__qr">
+															</div>
+															<div class="tac mb-20">
+																<a id="dep_address_qr_download"
+																	href="/qr-code/default/bc1qd03wnx85252h68th0nqwjjg9z9pmktmjju648j"
+																	download="" class="btn_save_qr">Сохранить QR код<img
+																		src="/svg/btn_save_qr.svg" alt=""></a>
+															</div>
+															<div class="tag_field" style="display: none;">
+																<div class="fs-12 color-gray">XRP tag</div>
+																<div class="copy mb-15">
+																	<div class="copy_text fs-20 fw-500"></div>
+																	<div class="copy_icon tooltip" data-title="Скопировать">
 																	</div>
 																</div>
-																<input id="deposit_ps" type="hidden" name="ps"
-																	value="10" autocomplete="off">
 															</div>
-														</div>
-													</div>
-													<div id="dep_info" class="wrp_input" style="display: block;">
-														<div class="exchange-block-add mb-10 ">
-															<div class="exchange-add__tip">
+															<div class="fs-12 color-gray">Адрес кошелька</div>
+															<div class="copy mb-20">
+																<div id="dep_address" class="copy_text fs-20 fw-500">
+																	bc1qd03wnx85252h68th0nqwjjg9z9pmktmjju648j</div>
+																<div class="copy_icon tooltip" data-title="Скопировать">
+																</div>
+	
+															</div>
+															<div class="fs-12 color-gray">XRP tag</div>
+															<div class="copy mb-20">
+																<div id="dep_address" class="copy_text fs-20 fw-500">
+																	19140</div>
+																<div class="copy_icon tooltip" data-title="Скопировать">
+																</div>
+	
+															</div>
+															<div class="exchange-block-add exchange-add__tip-blue mb-10 ">
 																<div class="exchange-add__img">
-																	<img src="svg/tip-green.svg" alt="tip-green">
+																	<img src="svg/tip-blue.svg" alt="tip-blue">
 																</div>
-																<p class="color-green"><span class="fw-500">Комиссия
-																		0.00053180 ETH ($0.84)</span><br />
-																	Будет вычтена из пришедшей суммы.</p>
+																<p class="color-blue"><span
+																		class="fw-500">Напоминание</span> Убедитесь что
+																	выбранная Вами сеть совпадает с сетью кошелька на
+																	который Вы выводите активы. В противном случае активы
+																	могут быть потеряны.</p>
+															</div>
+															<div class="warning_text warning_text_xrp"
+																style="display:none;">
+																<div><b>Напоминание</b> <span class="fs-14">Для перевода XRP
+																		требуется не только адрес кошелька, но и XRP tag.
+																		Пожалуйста, проверьте правильность введенных данных
+																		перед отправкой. Ошибка может привести к потере
+																		средств.</span></div>
 															</div>
 														</div>
-														<div class="color-gray mb-20">Пожалуйста, внесите средства <span
-																style="color: #000;">100.2938172823</span> XRP в ERC20
-															сети по следующему адресу:</div>
-														<div class="tac mb-20 exchange-block__qr">
+													</div>
+												</div>
+												<div class="exchange-block__bottom exchange-access">
+													<div id="dep_info" class="wrp_input mb-10" style="display: block;">
+														<h3 class="ttu fs-16 fw-500 tac mb-30">ИНФОРМАЦИЯ ОБ ОБМЕНЕ</h3>
+														<div class="color-gray mb-20">Вы успешно отправили <span
+																style="color: #000;">100.2938172823</span>Пожалуйста,
+															дождитесь подтверждения депозита.
 														</div>
-														<div class="tac mb-20">
-															<a id="dep_address_qr_download"
-																href="/qr-code/default/bc1qd03wnx85252h68th0nqwjjg9z9pmktmjju648j"
-																download="" class="btn_save_qr">Сохранить QR код<img
-																	src="/svg/btn_save_qr.svg" alt=""></a>
+	
+														<div class="exchange-access__flex">
+															<div class="exchange-access__white-bg">
+																<p class="fs-12 color-gray">Отправлено</p>
+																<p class="color-blue2 fw-500">100 USDT TRC20</p>
+															</div>
+															<div class="exchange-access__white-bg">
+																<p class="fs-12 color-gray">Получаете</p>
+																<p class="color-blue2 fw-500">0.000000094 BTC (BEP20)</p>
+															</div>
 														</div>
 														<div class="tag_field" style="display: none;">
 															<div class="fs-12 color-gray">XRP tag</div>
@@ -3512,166 +3593,105 @@
 																bc1qd03wnx85252h68th0nqwjjg9z9pmktmjju648j</div>
 															<div class="copy_icon tooltip" data-title="Скопировать">
 															</div>
-
+	
 														</div>
-														<div class="fs-12 color-gray">XRP tag</div>
+														<div class="fs-12 color-gray">Адрес получателя</div>
 														<div class="copy mb-20">
 															<div id="dep_address" class="copy_text fs-20 fw-500">
-																19140</div>
+																3MQTRzttkMtsMEy9dRq4Sf1xiSsWKgQkyH</div>
 															<div class="copy_icon tooltip" data-title="Скопировать">
 															</div>
-
-														</div>
-														<div class="exchange-block-add exchange-add__tip-blue mb-10 ">
-															<div class="exchange-add__img">
-																<img src="svg/tip-blue.svg" alt="tip-blue">
-															</div>
-															<p class="color-blue"><span
-																	class="fw-500">Напоминание</span> Убедитесь что
-																выбранная Вами сеть совпадает с сетью кошелька на
-																который Вы выводите активы. В противном случае активы
-																могут быть потеряны.</p>
-														</div>
-														<div class="warning_text warning_text_xrp"
-															style="display:none;">
-															<div><b>Напоминание</b> <span class="fs-14">Для перевода XRP
-																	требуется не только адрес кошелька, но и XRP tag.
-																	Пожалуйста, проверьте правильность введенных данных
-																	перед отправкой. Ошибка может привести к потере
-																	средств.</span></div>
+	
 														</div>
 													</div>
-												</div>
-											</div>
-											<div class="exchange-block__bottom exchange-access">
-												<div id="dep_info" class="wrp_input mb-10" style="display: block;">
-													<h3 class="ttu fs-16 fw-500 tac mb-30">ИНФОРМАЦИЯ ОБ ОБМЕНЕ</h3>
-													<div class="color-gray mb-20">Вы успешно отправили <span
-															style="color: #000;">100.2938172823</span>Пожалуйста,
-														дождитесь подтверждения депозита.
-													</div>
-
-													<div class="exchange-access__flex">
-														<div class="exchange-access__white-bg">
-															<p class="fs-12 color-gray">Отправлено</p>
-															<p class="color-blue2 fw-500">100 USDT TRC20</p>
-														</div>
-														<div class="exchange-access__white-bg">
-															<p class="fs-12 color-gray">Получаете</p>
-															<p class="color-blue2 fw-500">0.000000094 BTC (BEP20)</p>
-														</div>
-													</div>
-													<div class="tag_field" style="display: none;">
-														<div class="fs-12 color-gray">XRP tag</div>
-														<div class="copy mb-15">
-															<div class="copy_text fs-20 fw-500"></div>
-															<div class="copy_icon tooltip" data-title="Скопировать">
-															</div>
-														</div>
-													</div>
-													<div class="fs-12 color-gray">Адрес кошелька</div>
-													<div class="copy mb-20">
-														<div id="dep_address" class="copy_text fs-20 fw-500">
-															bc1qd03wnx85252h68th0nqwjjg9z9pmktmjju648j</div>
-														<div class="copy_icon tooltip" data-title="Скопировать">
-														</div>
-
-													</div>
-													<div class="fs-12 color-gray">Адрес получателя</div>
-													<div class="copy mb-20">
-														<div id="dep_address" class="copy_text fs-20 fw-500">
-															3MQTRzttkMtsMEy9dRq4Sf1xiSsWKgQkyH</div>
-														<div class="copy_icon tooltip" data-title="Скопировать">
-														</div>
-
-													</div>
-												</div>
-												<div class="wrp_input p-20">
-													<h3 class="ttu fs-16 fw-500 tac mb-30">ВАЖНАЯ ИНФОРМАЦИЯ</h3>
-													<ul>
-														<li class="fs-14 color-gray">В сумме, указанной в поле "Получаете", <a href="#">Комиссия за обмен</a> и <a href="#">Комиссия сети</a> уже учитывается!</li>
-													</ul>
-												</div>
-											</div>
-											<div class="exchange-block__bottom">
-												<div id="dep_info" class="wrp_input mb-10" style="display: block;">
-													<div class="color-gray mb-20"><span style="color: #000;">Ваш ордер
-															успешно исполнен!</span> Мы отправили
-														<span style="color: #000;">0.04773986 ВТС</span>ВТС по
-														следующему адресу:
-													</div>
-													<div class="color-blue2 fs-16 mb-15">
-														bc1qfgwluzjxpp402ksp5deq70umt3n5xzIn2kvOjx</div>
+													<div class="wrp_input p-20">
+														<h3 class="ttu fs-16 fw-500 tac mb-30">ВАЖНАЯ ИНФОРМАЦИЯ</h3>
 														<ul>
-															<li class="fs-14 color-gray">Если у вас есть какие-либо вопросы или
-																обратная связь, мы будем рады с ними ознакомиться! <a href="#">Служба поддержки</a></li>
+															<li class="fs-14 color-gray">В сумме, указанной в поле "Получаете", <a href="#">Комиссия за обмен</a> и <a href="#">Комиссия сети</a> уже учитывается!</li>
 														</ul>
+													</div>
 												</div>
-												<div class="exchange-block__btns">
-													<button id="exchange-back" class="btn3">Вернуться к обмену</button>
-													<button class="btn2">Проссмотреть транзакцию</button>
+												<div class="exchange-block__bottom">
+													<div id="dep_info" class="wrp_input mb-10" style="display: block;">
+														<div class="color-gray mb-20"><span style="color: #000;">Ваш ордер
+																успешно исполнен!</span> Мы отправили
+															<span style="color: #000;">0.04773986 ВТС</span> на ваш кошелек:
+														</div>
+														<div class="color-blue2 fs-16 mb-15">
+															0.000000094 BTC (BEP20)</div>
+															<ul>
+																<li class="fs-14 color-gray">Если у вас есть какие-либо вопросы или
+																	обратная связь, мы будем рады с ними ознакомиться! <a href="#">Служба поддержки</a></li>
+															</ul>
+													</div>
+													<div class="exchange-block__btns">
+														<button id="exchange-back" class="btn3">Вернуться к обмену</button>
+														<button class="btn2">Проссмотреть транзакцию</button>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div id="withdraw_right">
-											<div class="withdraw_right">
-												<div class="fs-18 ttu tac mb-15"><b>Информация об обмене</b></div>
-												<div id="exchange-id" class="copy mb-25">
-													<div class="fs-14 color-gray">
-														Индентификатор ордера: <span style="color: #000;">nfkzRb4UhY</span>
+										<div>
+											<div id="withdraw_right">
+												<div class="withdraw_right">
+													<div class="fs-18 ttu tac mb-15"><b>Информация об обмене</b></div>
+													<div id="exchange-id" class="copy mb-25">
+														<div class="fs-14 color-gray">
+															Индентификатор ордера: <span style="color: #000;">nfkzRb4UhY</span>
+														</div>
+														<div class="copy_icon tooltip" data-title="Скопировать">
+														</div>
 													</div>
-													<div class="copy_icon tooltip" data-title="Скопировать">
-													</div>
-												</div>
-												<div class="withdraw_info mb-10">
-													<div>
-														<div class="fs-14">Текущий курс</div>
-														<div id="accrual_amount"
-															class="fs-14 fw-500 color-blue ttu ml-10">1 XRP = 0.000000094 BTC</div>
-													</div>
-													<div>
-														<div class="flex_between_center mb-10">
-															<div class="fs-14">Комиссия за обмен</div>
-															<div class="fs-14 color-blue" id="percent_service">
-																0.00%
+													<div class="withdraw_info mb-10">
+														<div>
+															<div class="fs-14">Текущий курс</div>
+															<div id="accrual_amount"
+																class="fs-14 fw-500 color-blue ttu ml-10">1 XRP = 0.000000094 BTC</div>
+														</div>
+														<div>
+															<div class="flex_between_center mb-10">
+																<div class="fs-14">Комиссия за обмен</div>
+																<div class="fs-14 color-blue" id="percent_service">
+																	0.00%
+																</div>
+															</div>
+															<div class="flex_between_center mb-10">
+																<div class="fs-14">Комиссия сети</div>
+																<div class="fs-14 color-blue" id="min_withdraw_amount"
+																	data-fee="">0.0004 BTC</div>
+															</div>
+															<div class="flex_between_center mb-10 white">
+																<div class="fs-14">Меняете</div>
+																<div class="fs-14 color-blue">
+																	200.00 USDT (BEP20)
+																</div>
+															</div>
+															<div class="flex_between_center mb-10 white">
+																<div class="fs-14">Получаете</div>
+																<div class="fs-14 color-blue">0.000000094 BTC (BEP20)</div>
+															</div>
+															<div class="flex_between_center mb-10">
+																<div class="fs-14">Примерное время обмена</div>
+																<div class="fs-14 color-blue">
+																	Моментально
+																</div>
+															</div>
+															<div class="flex_between_center mb-10">
+																<div class="fs-14">Дата создания</div>
+																<div class="fs-14 color-blue">18.01.2023 (08:18:02)</div>
 															</div>
 														</div>
-														<div class="flex_between_center mb-10">
-															<div class="fs-14">Комиссия сети</div>
-															<div class="fs-14 color-blue" id="min_withdraw_amount"
-																data-fee="">0.0004 BTC</div>
-														</div>
-														<div class="flex_between_center mb-10 white">
-															<div class="fs-14">Меняете</div>
-															<div class="fs-14 color-blue">
-																200.00 USDT (BEP20)
-															</div>
-														</div>
-														<div class="flex_between_center mb-10 white">
-															<div class="fs-14">Получаете</div>
-															<div class="fs-14 color-blue">0.000000094 BTC (BEP20)</div>
-														</div>
-														<div class="flex_between_center mb-10">
-															<div class="fs-14">Примерное время обмена</div>
-															<div class="fs-14 color-blue">
-																Моментально
-															</div>
-														</div>
-														<div class="flex_between_center mb-10">
-															<div class="fs-14">Дата создания</div>
-															<div class="fs-14 color-blue">18.01.2023 (08:18:02)</div>
-														</div>
 													</div>
-												</div>
-
-												<div class="withdraw_info_list mb-20">
-													<div class="tac ttu mb-20"><b>Важная информация</b></div>
-													<ul>
-														<li class="fs-14 color-gray">В сумме, указанной в поле "Получаете", <a href="#">Комиссия за обмен</a> и <a href="#">Комиссия сети</a> уже учитывается!</li>
-														<li class="fs-14 color-gray">Наши алгоритмы и улучшенные маршруты обмена всегда обеспечивают вам лучший куос на рынке!</li>
-														<li class="fs-14 color-gray">Во время транзакции Лучшая доступная ставка может измениться. Убедитесь, что вы включили <a href="#">VPM</a> чтобы зашититься от волатильности!li>
-														<li class="fs-14 color-gray">Комиссия за обмен зависит от вашего <a href="#">Структура комиссий</a> уровня, поэтому не забудьте войти в свою учетную запись или зарегистрироваться, указав адрес электронной почты.</li>
-													</ul>
+	
+													<div class="withdraw_info_list mb-20">
+														<div class="tac ttu mb-20"><b>Важная информация</b></div>
+														<ul>
+															<li class="fs-14 color-gray">В сумме, указанной в поле "Получаете", <a href="#">Комиссия за обмен</a> и <a href="#">Комиссия сети</a> уже учитывается!</li>
+															<li class="fs-14 color-gray">Наши алгоритмы и улучшенные маршруты обмена всегда обеспечивают вам лучший куос на рынке!</li>
+															<li class="fs-14 color-gray">Во время транзакции Лучшая доступная ставка может измениться. Убедитесь, что вы включили <a href="#">VPM</a> чтобы зашититься от волатильности!li>
+															<li class="fs-14 color-gray">Комиссия за обмен зависит от вашего <a href="#">Структура комиссий</a> уровня, поэтому не забудьте войти в свою учетную запись или зарегистрироваться, указав адрес электронной почты.</li>
+														</ul>
+													</div>
 												</div>
 											</div>
 										</div>
