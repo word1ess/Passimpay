@@ -483,8 +483,10 @@ border-radius: 26px;
     }
 }
 
-@media only screen and (max-width: 992px) {
-
+@media only screen and (max-width: 900px) {
+    .content_menu ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media only screen and (max-width: 768px) {
