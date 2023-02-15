@@ -537,6 +537,9 @@ border-radius: 26px;
 
 /* Для Ховера в Даш борд и попапов (Этап 2) */
 
+.balance_total:hover{
+    background: #3464EC;
+}
 
 .wallets{
     position: relative;
@@ -557,7 +560,7 @@ border-radius: 26px;
 .wallets__hover.active{
     opacity: 1;
     z-index: 2;
-    transform: translate(0px, -10px);
+    transform: translate(0px, -15px);
 }
 .wallets__item {
     padding: 0px 15px;
