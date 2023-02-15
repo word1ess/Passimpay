@@ -454,6 +454,9 @@ border-radius: 26px;
     .exchange-choose{
         justify-content: space-between;
     }
+    .exchange-block__title-row div:first-child a{
+        padding: 0px 0px 0px 30px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
