@@ -428,6 +428,14 @@ border-radius: 26px;
     stroke: #fff;
     fill: #fff;
 }
+
+.wrp_content_menu > div:nth-child(1){
+    min-width: 330px;
+}
+
+.wrp_withdraw {
+    grid-template-columns: 1.9fr 1fr;
+}
   
 
 @media only screen and (max-width: 1900px){
@@ -437,6 +445,13 @@ border-radius: 26px;
 @media only screen and (max-width: 1700px) {
 
 }
+@media (max-width: 1600px){
+    .wrp_withdraw {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+}
+
 
 @media only screen and (max-width: 1440px) {
 
@@ -565,6 +580,11 @@ border-radius: 26px;
     z-index: 2;
     transform: translate(0px, -15px);
 }
+.wallets__items{
+    max-height: 263.333px;
+    overflow-y: auto;
+}
+
 .wallets__item {
     padding: 0px 15px;
 }
@@ -572,7 +592,7 @@ border-radius: 26px;
     display: flex;
     position: relative;
     gap: 10px;
-    padding: 10px 0px;
+    padding: 10px 5px;
     background: #fff;
     border-width: 1px 0px;
     border-style: solid;
@@ -580,39 +600,29 @@ border-radius: 26px;
 }
 
 .wallets__show:hover {
-    display: flex;
-    position: relative;
-    gap: 10px;
-    padding: 10px 0px;
     background: #F5F8FB;
     border-color: #C6D6E6;
 }
 
-.wallets__show::before{
-    content: '';
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translate(0%, -50%);
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px solid #C6D6E6;
+.wallets__show:hover .wallets__btn{
+    background: #fff;
 }
 .wallets__show::after{
-    content: '˅';
+    content: url('../svg/arrow-small-blue.svg');
     position: absolute;
     right: 4px;
     top: calc(50% + 3px);
-    transform: translate(0%, -50%);
+    transform: translate(0%, -50%) rotate(180deg);
     font-size: 12px;
     font-weight: 900;
     color: #1843BF;
     transition: all 300ms ease;
+    width: 15px;
+    height: 15px;
 }
 
 .wallets__show.active::after{
-    transform: translate(0%, calc(-50% - 6px)) rotate(180deg);
+    transform: translate(0%, -50%) rotate(0deg);
 }
 .wallets__img {
     display: flex;
@@ -630,15 +640,31 @@ border-radius: 26px;
     width: 20px;
     height: 20px;
 }
-.wallets__info {
-}
 .wallets__name {
     margin-bottom: 0px;
 }
-.wallets__balance {
-}
 .wallets__slide {
     padding: 10px 0px;
+}
+
+
+
+.wallets__lines{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 15px;
+    gap: 3.3px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wallets__lines:hover *{
+    fill: #3464EC;
+}
+
+.wallets__lines *{
+    fill: #374957;
 }
 
 .wallets__more{
@@ -647,6 +673,11 @@ border-radius: 26px;
 
 .slide-wallets {
     display: none;
+}
+
+.slide-wallets__scroll{
+    max-height: 263px;
+    overflow-y: auto;
 }
 .slide-wallets__name, .wallets__balance {
     margin-bottom: 0px;
@@ -661,7 +692,7 @@ border-radius: 26px;
     background-image: url("../svg/checked.svg");
     background-size: cover;
     width: 15px;
-    height: 15px;
+    height: 16px;
     right: 4px;
     top: 50%;
     transform: translate(0%, -50%);
@@ -677,6 +708,13 @@ border-radius: 26px;
     border-width: 1px 0px;
     border-style: solid;
     border-color: #C6D6E6;
+}
+
+.slide-wallets__input.flex-row{
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .slide-wallets__input:hover{
@@ -704,7 +742,6 @@ border-radius: 26px;
 
 .all-wallets__subtitle{
     margin: 20px;
-    line-height: 150%;
 }
 
 .all-wallets__row{
@@ -713,12 +750,15 @@ border-radius: 26px;
     border: 1px solid #D9E3EE;
     border-radius: 10px;
     margin: 0px 0px 10px;
+    max-height: 285px;
+    overflow-y: auto;
 }
 
 .all-wallets__row .wallets__show{
     flex-direction: row;
     padding: 10px 30px 10px 0px;
 }
+
 
 .wallets__btns{
     display: flex;
@@ -784,7 +824,7 @@ border-radius: 26px;
 
 .create-wallet__items{
     display: flex;
-    gap: 17px;
+    gap: 14px;
     justify-content: space-between;
 }
 
@@ -885,10 +925,10 @@ border-radius: 26px;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 615px) {
     .create-wallet__items{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(50px, 50px));
+        grid-template-columns: repeat(auto-fill, minmax(40px, 40px));
     }
 
 }
