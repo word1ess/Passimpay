@@ -1072,23 +1072,120 @@
 
 					<h3 class="mb-15 ttu">Мои кошельки</h3>
 
-					<div class="balance_total">
-						<div class="flex_between_center mb-5">
-							<div class="flex_start_center">
-								<div class="fs-15 fw-500 color-gray2">Общий баланс</div>
-								<button class="btn_hide_balance ml-5"><svg width="17" height="17" viewBox="0 0 16 16"
-										fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M15.1451 8L14.89 8.31499C12.6301 11.09 10.315 12.4999 8.00016 12.4999C5.68528 12.4999 3.37005 11.09 1.11022 8.31499L0.85521 8L1.11022 7.68501C5.61024 2.12995 10.3752 2.12995 14.8902 7.68501L15.1451 8Z"
-											fill="#F5F8FB" />
-										<circle cx="8" cy="8" r="3.5" stroke="#1843BF" />
-									</svg></button>
+					<div class="wallets" id="wallets">
+						<div class="balance_total">
+							<div class="flex_between_center mb-5">
+								<div class="flex_start_center">
+									<div class="fs-15 fw-500 color-gray2">Общий баланс</div>
+									<button class="btn_hide_balance ml-5"><svg width="17" height="17"
+											viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M15.1451 8L14.89 8.31499C12.6301 11.09 10.315 12.4999 8.00016 12.4999C5.68528 12.4999 3.37005 11.09 1.11022 8.31499L0.85521 8L1.11022 7.68501C5.61024 2.12995 10.3752 2.12995 14.8902 7.68501L15.1451 8Z"
+												fill="#F5F8FB" />
+											<circle cx="8" cy="8" r="3.5" stroke="#1843BF" />
+										</svg></button>
+								</div>
+								<div class="balance_total_percent color-green fs-14 fw-500 tooltip bal_tp_out"
+									data-title="Последняя транзакция">+0.00$</div>
 							</div>
-							<div class="balance_total_percent color-green fs-14 fw-500 tooltip bal_tp_out"
-								data-title="Последняя транзакция">+0.00$</div>
+							<div class="fs-24 color-white"><b class="bal_t_out">$<span class="whb"><span
+											class="hb">21,590.76</span></span></b></div>
 						</div>
-						<div class="fs-24 color-white"><b class="bal_t_out">$<span class="whb"><span
-										class="hb">21,582.71</span></span></b></div>
+						<div class="wallets__hover">
+							<div class="wallets__item">
+								<div class="wallets__show">
+									<div class="wallets__img">
+										<img src="svg/wallet-1.svg" alt="">
+									</div>
+									<div class="wallets__info">
+										<p class="wallets__name fs-14 fw-500">Кошелек 01</p>
+										<div class="wallets__balance fs-12 color-gray">$2,319.38</div>
+									</div>
+								</div>
+								<div class="wallets__slide slide-wallets">
+										<label class="slide-wallets__input">
+											<input type="checkbox" name="wallet-1" id="">
+											<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+											<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+										</label>
+										<label class="slide-wallets__input">
+											<input type="checkbox" name="wallet-1" id="">
+											<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+											<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+										</label>
+								</div>
+							</div>
+							<div class="wallets__item">
+								<div class="wallets__show">
+									<div class="wallets__img">
+										<img src="svg/wallet-1.svg" alt="">
+									</div>
+									<div class="wallets__info">
+										<p class="wallets__name fs-14 fw-500">Кейс</p>
+										<div class="wallets__balance fs-12 color-gray">$10,112,319.38</div>
+									</div>
+								</div>
+								<div class="wallets__slide slide-wallets">
+									<label class="slide-wallets__input">
+										<input type="checkbox" name="wallet-1" id="">
+										<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+										<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+									</label>
+									<label class="slide-wallets__input">
+										<input type="checkbox" name="wallet-1" id="">
+										<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+										<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+									</label>
+								</div>
+							</div>
+							<div class="wallets__item">
+								<div class="wallets__show">
+									<div class="wallets__img">
+										<img src="svg/wallet-1.svg" alt="">
+									</div>
+									<div class="wallets__info">
+										<p class="wallets__name fs-14 fw-500">на тачку</p>
+										<div class="wallets__balance fs-12 color-gray">$34,319.38</div>
+									</div>
+								</div>
+								<div class="wallets__slide slide-wallets">
+									<label class="slide-wallets__input">
+										<input type="checkbox" name="wallet-1" id="">
+										<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+										<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+									</label>
+									<label class="slide-wallets__input">
+										<input type="checkbox" name="wallet-1" id="">
+										<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+										<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+									</label>
+								</div>
+							</div>
+							<div class="wallets__item">
+								<div class="wallets__show">
+									<div class="wallets__img">
+										<img src="svg/wallet-1.svg" alt="">
+									</div>
+									<div class="wallets__info">
+										<p class="wallets__name fs-14 fw-500">На еду</p>
+										<div class="wallets__balance fs-12 color-gray">$919.38</div>
+									</div>
+								</div>
+								<div class="wallets__slide slide-wallets">
+									<label class="slide-wallets__input">
+										<input type="checkbox" name="wallet-1" id="">
+										<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+										<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+									</label>
+									<label class="slide-wallets__input">
+										<input type="checkbox" name="wallet-1" id="">
+										<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+										<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+									</label>
+								</div>
+							</div>
+							<div data-modal="all-wallets" class="wallets__more btn2 fs-14 fw-500">Посмотрите свои кошельки</div>
+						</div>
 					</div>
 					<div class="btn_modal_balance">
 						<div><b>Выбрать кошелек для пополнения</b></div>
@@ -4430,6 +4527,356 @@
 			</div>
 		</div>
 	</div>
+	<div id="all-wallets" class="modal">
+		<div class="inner_modal">
+			<button class="btn_close_modal" style="--x:13px; --y:34.3333px;"></button>
+			<div class="all-wallets__title fs-24 fw-500 tac">
+				Ваши Кошельки
+			</div>
+			<div class="all-wallets__subtitle fs-16 tac color-gray">
+				Вы можете иметь несколько кошельков и акаунтов в Passimpay. Каждый из них может быть использован для разных целей, таких как экономия, расходы, покупки и т.д.
+			</div>
+			<div class="all-wallets__row">
+				<div class="wallets__item">
+					<div class="wallets__show">
+						<div class="wallets__img">
+							<img src="svg/wallet-1.svg" alt="">
+						</div>
+						<div class="wallets__info">
+							<p class="wallets__name fs-14 fw-500">Кошелек 01</p>
+							<div class="wallets__balance fs-12 color-gray">$2,319.38</div>
+						</div>
+						<div class="wallets__btns">
+							<div data-modal="change-wallet" class="wallets__btn">
+								<svg width="16" height="16">
+									<use xlink:href="#pen"></use>
+								</svg>
+							</div>
+							<div data-modal="settings-wallet" class="wallets__btn">
+								<svg width="18" height="18">
+									<use xlink:href="#shelter"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="wallets__slide slide-wallets">
+							<label class="slide-wallets__input">
+								<input type="checkbox" name="wallet-1" id="">
+								<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+								<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+							</label>
+							<label class="slide-wallets__input">
+								<input type="checkbox" name="wallet-1" id="">
+								<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+								<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+							</label>
+							<div class="btn3">Создать новый аккаунт</div>
+					</div>
+				</div>
+				<div class="wallets__item">
+					<div class="wallets__show">
+						<div class="wallets__img"><img src="svg/wallet-1.svg" alt=""></div>
+						<div class="wallets__info">
+							<p class="wallets__name fs-14 fw-500">Кейс</p>
+							<div class="wallets__balance fs-12 color-gray">$10,112,319.38</div>
+						</div>
+						<div class="wallets__btns">
+							<div data-modal="change-wallet" class="wallets__btn">
+								<svg width="16" height="16">
+									<use xlink:href="#pen"></use>
+								</svg>
+							</div>
+							<div data-modal="settings-wallet" class="wallets__btn">
+								<svg width="18" height="18">
+									<use xlink:href="#shelter"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="wallets__slide slide-wallets">
+						<label id="c1" class="slide-wallets__input">
+							<input type="checkbox" name="wallet-1" id="">
+							<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+							<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+						</label>
+						<label id="c2" class="slide-wallets__input">
+							<input type="checkbox" name="wallet-1" id="">
+							<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+							<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+						</label>
+						<div class="btn3">Создать новый аккаунт</div>
+					</div>
+				</div>
+				<div class="wallets__item">
+					<div class="wallets__show">
+						<div class="wallets__img"><img src="svg/wallet-1.svg" alt=""></div>
+						<div class="wallets__info">
+							<p class="wallets__name fs-14 fw-500">на тачку</p>
+							<div class="wallets__balance fs-12 color-gray">$34,319.38</div>
+						</div>
+						<div class="wallets__btns">
+							<div data-modal="change-wallet" class="wallets__btn">
+								<svg width="16" height="16">
+									<use xlink:href="#pen"></use>
+								</svg>
+							</div>
+							<div data-modal="settings-wallet" class="wallets__btn">
+								<svg width="18" height="18">
+									<use xlink:href="#shelter"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="wallets__slide slide-wallets">
+						<label class="slide-wallets__input">
+							<input type="checkbox" name="wallet-1" id="">
+							<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+							<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+						</label>
+						<label class="slide-wallets__input">
+							<input type="checkbox" name="wallet-1" id="">
+							<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+							<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+						</label>
+						<div class="btn3">Создать новый аккаунт</div>
+					</div>
+				</div>
+				<div class="wallets__item">
+					<div class="wallets__show">
+						<div class="wallets__img"><img src="svg/wallet-1.svg" alt=""></div>
+						<div class="wallets__info">
+							<p class="wallets__name fs-14 fw-500">На еду</p>
+							<div class="wallets__balance fs-12 color-gray">$919.38</div>
+						</div>
+						<div class="wallets__btns">
+							<div data-modal="change-wallet" class="wallets__btn">
+								<svg width="16" height="16">
+									<use xlink:href="#pen"></use>
+								</svg>
+							</div>
+							<div data-modal="settings-wallet" class="wallets__btn">
+								<svg width="18" height="18">
+									<use xlink:href="#shelter"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="wallets__slide slide-wallets">
+						<label class="slide-wallets__input">
+							<input type="checkbox" name="wallet-1" id="">
+							<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+							<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+						</label>
+						<label class="slide-wallets__input">
+							<input type="checkbox" name="wallet-1" id="">
+							<p class="slide-wallets__name fs-12">Аккаунт 01</p>
+							<p class='wallets__balance fs-12 color-gray'>$2,319.38</p>
+						</label>
+						<div class="btn3">Создать новый аккаунт</div>
+					</div>
+				</div>
+			</div>
+			<div data-modal="create-wallet" class="all-wallets__create btn2 ">Создать новый кошелек</div>
+		</div>
+	</div>
+	<div id="create-wallet" class="modal">
+		<div class="inner_modal">
+			<button class="btn_close_modal" style="--x:13px; --y:34.3333px;"></button>
+			<div class="all-wallets__title fs-24 fw-500 tac">
+				Создать кошелек
+			</div>
+			<div class="all-wallets__bg">
+				<div class="all-wallets__img">
+					<img src="svg/wallet-1.svg" alt="">
+				</div>
+			</div>
+			<div class="all-wallets__subtitle fs-16 tac color-gray">
+				Теперь с помощью PassimPay wallet можно изучить более 20 сетей.
+			</div>
+			<div class="create-wallet__input mb-10">
+				<p class="fs-14 fw-500 tac">Впишите имя кошелька...</p>
+				<input type="text">
+			</div>
+			<div class="create-wallet__row">
+				<p class="fs-14 fw-500 tac">Выберите цвет кошелька</p>
+				<div class="create-wallet__items create-wallet__items__colors">
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+				</div>
+			</div>
+			<div class="create-wallet__row mb-20">
+				<p class="fs-14 fw-500 tac">Выбрать значек</p>
+				<div class="create-wallet__items">
+					<div class="create-wallet__item">
+						<img src="svg/wallet-1.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-2.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-3.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-4.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-5.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-6.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-7.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-8.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-9.svg" alt="">
+					</div>
+				</div>
+			</div>
+			<div data-modal="create-wallet-succes" class="all-wallets__create btn2">Создать новый кошелек</div>
+		</div>
+	</div>
+	<div id="create-wallet-succes" class="modal">
+		<div class="inner_modal">
+			<button class="btn_close_modal" style="--x:13px; --y:34.3333px;"></button>
+			<div class="all-wallets__title fs-24 fw-500 tac">
+				Кошелек “Кошелек1” создан
+			</div>
+			<div class="all-wallets__subtitle fs-16 tac color-gray">
+				Теперь с помощью PassimPay wallet можно изучить более 20 сетей.
+			</div>
+			<div class="all-wallets__img without-bg">
+				<img src="svg/success.svg" alt="">
+			</div>
+			<div class="create-wallet-succes__btns">
+				<div class="btn3">Вернуться в кошельки</div>
+				<div class="btn2">Продолжить в основной</div>
+			</div>
+		</div>
+	</div>
+	<div id="change-wallet" class="modal">
+		<div class="inner_modal">
+			<button class="btn_close_modal" style="--x:13px; --y:34.3333px;"></button>
+			<div class="all-wallets__title fs-24 fw-500 tac">
+				Настроить кошелек
+			</div>
+			<div class="all-wallets__bg">
+				<div class="all-wallets__img">
+					<img src="svg/wallet-1.svg" alt="">
+				</div>
+			</div>
+			<div class="all-wallets__subtitle fs-16 tac color-gray">
+				Вы можете настроить свой кошелек с помощью разных цветов и значков
+			</div>
+			<div class="create-wallet__input mb-10">
+				<p class="fs-14 fw-500 tac">Впишите имя кошелька...</p>
+				<input type="text">
+			</div>
+			<div class="create-wallet__row">
+				<p class="fs-14 fw-500 tac">Выберите цвет кошелька</p>
+				<div class="create-wallet__items create-wallet__items__colors">
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+					<div class="create-wallet__item"></div>
+				</div>
+			</div>
+			<div class="create-wallet__row mb-20">
+				<p class="fs-14 fw-500 tac">Выбрать значек</p>
+				<div class="create-wallet__items">
+					<div class="create-wallet__item">
+						<img src="svg/wallet-1.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-2.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-3.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-4.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-5.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-6.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-7.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-8.svg" alt="">
+					</div>
+					<div class="create-wallet__item">
+						<img src="svg/wallet-9.svg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="all-wallets__create btn2">Сохранить изменения</div>
+		</div>
+	</div>
+	<div id="settings-wallet" class="modal">
+		<div class="inner_modal">
+			<button class="btn_close_modal" style="--x:13px; --y:34.3333px;"></button>
+			<div class="all-wallets__title fs-24 fw-500 tac">
+				Настроить кошелек
+			</div>
+			<div class="all-wallets__bg">
+				<div class="all-wallets__img">
+					<img src="svg/wallet-1.svg" alt="">
+				</div>
+			</div>
+			<div class="change-wallet__row">
+				<div class="wallets__img">
+					<img src="svg/wallet-1.svg" alt="">
+				</div>
+				<div class="wallets__info">
+					<p class="wallets__name fs-14 fw-500">Удалить портфолио Кошелек 01</p>
+					<div class="wallets__balance fs-12 color-gray">Действие нельзя отменить</div>
+				</div>
+				<div class="wallets__btns">
+					<div data-modal="delete-wallet" class="wallets__btn">
+						<img src="svg/delete.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="delete-wallet" class="modal">
+		<div class="inner_modal">
+			<button class="btn_close_modal" style="--x:13px; --y:34.3333px;"></button>
+			<div class="all-wallets__title fs-24 fw-500 tac">
+				Удалить “Кошелек1” кошелек?
+			</div>
+			<div class="all-wallets__subtitle fs-16 tac color-gray">
+				Это действие является постоянным и не может быть отменено.
+			</div>
+			<div class="all-wallets__img without-bg">
+				<img src="svg/warning.svg" alt="">
+			</div>
+			<div class="btn2">Сохранить изменения</div>
+		</div>
+	</div>
+
+	<script src="js/dashboard-popup.js"></script>
 
 
 </body>
