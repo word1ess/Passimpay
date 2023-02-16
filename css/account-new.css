@@ -493,8 +493,10 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
   
 
-@media only screen and (max-width: 1900px){
-
+@media only screen and (max-width: 1800px){
+    .exchange-block__title-row div:nth-child(3) a, .exchange-block__title-row div:last-child a{
+        padding: 0px 0px 0px 10px;
+    }
 }
 
 @media only screen and (max-width: 1700px) {
