@@ -2,7 +2,8 @@
 $(document).ready(function () {
   $(".wallets__show").click(function name(event) {
     $(this).toggleClass("active").next().slideToggle(300);
-  });
+    event.stopImmediatePropagation();
+  }, true);
 });
 
 // Перемещение у кошельков
@@ -34,11 +35,19 @@ document.querySelectorAll(".wallets__slide").forEach((e) => {
 const wallets = document.querySelector("#wallets");
 if (wallets) {
   const walletsHover = document.querySelector(".wallets__hover");
-  wallets.addEventListener("mouseover", () => {
-    walletsHover.classList.add("active");
-  });
-  wallets.addEventListener("mouseout", () => {
-    walletsHover.classList.remove("active");
+
+  if (window.screen.width > 993) {
+    hover(wallets, walletsHover);
+  } else {
+    click(wallets, walletsHover);
+  }
+}
+
+const walletsBtn = Array.from(document.querySelectorAll(".wallets__btn"));
+
+if (walletsBtn[0]) {
+  walletsBtn.forEach((btn) => {
+    hover(btn, btn);
   });
 }
 
@@ -62,5 +71,36 @@ if (settingsRowArr[0]) {
         el.classList.remove("active");
       });
     }
+  });
+}
+
+// Перенос кнопки Структура комиссий
+
+const structureBtn = document.querySelector("#open_list_partners");
+
+if (structureBtn && window.screen.width < 993) {
+  const structureParentBlock = document.querySelector("#content-menu");
+  let cloneBtn = structureBtn.cloneNode(true);
+  structureBtn.style.display = "none";
+  cloneBtn.style.cssText = `
+    max-width: 324px;
+    margin: 0 auto;
+    margin-top: 20px;
+  `;
+  structureParentBlock.appendChild(cloneBtn);
+}
+
+function hover(parent, children) {
+  parent.addEventListener("mouseover", () => {
+    children.classList.add("active");
+  });
+  parent.addEventListener("mouseout", () => {
+    children.classList.remove("active");
+  });
+}
+
+function click(parent, children) {
+  parent.addEventListener("click", (event) => {
+    children.classList.toggle("active");
   });
 }
