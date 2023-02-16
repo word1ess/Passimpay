@@ -240,29 +240,35 @@ position: relative;
     z-index: 5;
 }
 
-.exchange-block__title-row div:first-child{
-    flex: 1 1 calc(50% + 10px);
-}
-.exchange-block__title-row div:nth-child(2), .exchange-block__title-row div:last-child{
-    flex: 0 1 25%;
-    position: relative;
-    left: -5px;
+.exchange-block__title-row div:nth-child(1){
+    z-index: 4;
 }
 
 .exchange-block__title-row div:nth-child(2){
-    left: -5px;
+    flex: 1 1 calc(50% + 10px);
+    z-index: 3;
+}
+.exchange-block__title-row div:nth-child(3), .exchange-block__title-row div:last-child{
+    flex: 0 1 calc(25% + 30px);
+    position: relative;
+}
+
+.exchange-block__title-row div:nth-child(3){
+    left: -10px;
+    z-index: 2;
 }
 .exchange-block__title-row div:last-child{
-    left: -11px;
+    left: -20px;
+    z-index: 1;
 }
 .exchange-block__title-row div a{
     width: 100%;
 }
-.exchange-block__title-row div:first-child a{
+.exchange-block__title-row div:nth-child(2) a{
     padding: 0px 0px 0px 25px;
 }
-.exchange-block__title-row div:nth-child(2) a, .exchange-block__title-row div:last-child a{
-    padding: 0px 0px 0px 10px;
+.exchange-block__title-row div:nth-child(3) a, .exchange-block__title-row div:last-child a{
+    padding: 0px 0px 0px 28px;
 }
 .exchange-block__title-row .content_menu_soon{
     position: absolute !important;
@@ -280,6 +286,10 @@ position: relative;
 }
 .exchange-block__title-row .content_menu_soon span{
     font-size: 8px;
+}
+
+.border_title div{
+    left: 0px !important;
 }
 
 /**
@@ -444,9 +454,6 @@ border-radius: 26px;
     fill: #fff;
 }
 
-.wrp_content_menu > div:nth-child(1){
-    min-width: 330px;
-}
 
 .wrp_withdraw {
     grid-template-columns: 1.9fr 1fr;
@@ -467,6 +474,21 @@ border-radius: 26px;
     height: 37px;
     z-index: 0;
     background:  no-repeat center/ 100% 100% url('../img/corner.png');
+}
+
+.exchange-block .inner_border_title:before{
+    display: none;
+}
+
+.exchange-block .border_title:before{
+    content:'';
+position:absolute;
+z-index: 2;
+top: -1px;
+right: -25px;
+width: 27px;
+height: 42px;
+background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 0 29 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-5.632 0.5H-123C-132.428 0.5 -137.142 0.5 -140.071 3.42893C-143 6.35786 -143 11.0719 -143 20.5V485.5C-143 494.928 -143 499.642 -140.071 502.571C-137.142 505.5 -132.428 505.5 -123 505.5H449.5C458.928 505.5 463.642 505.5 466.571 502.571C469.5 499.642 469.5 494.928 469.5 485.5V63C469.5 53.5719 469.5 48.8579 466.571 45.9289C463.642 43 458.928 43 449.5 43H37.132C30.076 43 26.548 43 23.911 41.0708C21.274 39.1415 20.206 35.7793 18.07 29.0548L13.43 14.4452C11.294 7.72073 10.226 4.3585 7.589 2.42925C4.952 0.5 1.424 0.5 -5.632 0.5Z" stroke="rgba(219, 228, 236, 1)" fill="white"/></svg>') no-repeat right top;
 }
 
   
@@ -511,6 +533,9 @@ border-radius: 26px;
     .content_menu ul {
         grid-template-columns: repeat(2, 1fr);
     }
+    .content_menu li .flex{
+        padding: 0px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -528,62 +553,72 @@ border-radius: 26px;
     .exchange-block .wrp_border_title{
         margin: 0px;
     }
+    .exchange-block__item::after{
+        display: none;
+    }
+    .exchange-block__soon{
+        clip-path: none;
+    }
 
 }
 
-@media only screen and (max-width: 576px) {
-    .inner_border_title.exchange-block__title-row{
-        flex-direction: row;
+@media only screen and (max-width: 700px) {
+
+    .exchange-block .border_title:before{
+        display: none;
     }
+    .exchange-block__title-row{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        gap: 6px;
+        margin: 0px 0px 15px;
+    }
+    .exchange-block__title-row div:nth-child(2), .exchange-block__title-row div:last-child, .exchange-block__title-row div:first-child, .exchange-block__title-row div:nth-child(3){
+        left: 0;
+        flex: none;
+        text-align: center;
+    }
+    .border_title, .exchange-block__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        border: 1px solid #C6D6E6;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .exchange-block__title-row a{
+        display: block;
+        background: none;
+        border: none;
+        padding: 0px !important;
+        margin: 0 auto;
+        height: fit-content;
+    }
+    .content_menu li{
+        padding: 10px;
+    }
+    .exchange-block__title-row .content_menu_soon{
+        top: -4px;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
 
 }
 
 @media only screen and (max-width: 378px) {
-    .inner_border_title.exchange-block__title-row{
-        flex-direction: column;
-        gap: 6px;
-        margin: 0px 0px 20px;
-    }
-    .exchange-choose__item{
-        flex: 1 1 30%;
-        padding: 0px;
-    }
-    .exchange-block__title-row .exchange-block__item, .exchange-block .border_title{
-        display: flex;
-        align-items: center;
-        position: relative;
-        background: #fff;
-        width: 100%;
-        height: 35px;
-        border: 1px solid #C6D6E6;
-        border-radius: 10px;
-        margin: 0 auto;
-        padding: 10px 0px;
-    }
-
-    .exchange-block__soon{
-        margin: 0px;
-    }
-
-    .exchange-block .border_title{
-        justify-content: center;
-    }
-
-    .exchange-block__title-row .exchange-block__item a{
-        display: block;
-        background: #fff;
-        clip-path: none;
-        text-align: center;
-        height: fit-content;
-    }
     .exchange-block__top{
         flex-direction: column;
     }
 
-    .exchange-block__title-row div:nth-child(2), .exchange-block__title-row div:last-child, .exchange-block__title-row div:first-child{
-        left: 0;
-        flex: none;
+    .exchange-block__title-row{
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     }
+
 }
 
 /* Для Ховера в Даш борд и попапов (Этап 2) */
@@ -594,6 +629,14 @@ border-radius: 26px;
 
 .wallets{
     position: relative;
+}
+.wallets .balance_total{
+    display: flex;
+    justify-content: space-between;
+}
+.wallets__header-img{
+    display: flex;
+    align-items: center;
 }
 .wallets__hover {
     position: absolute;
