@@ -1,35 +1,106 @@
 // Слайд у кошельков
-$(document).ready(function () {
-  $(".wallets__show").click(function name(event) {
-    $(this).toggleClass("active").next().slideToggle(300);
-    event.stopImmediatePropagation();
-  }, true);
+$("body").delegate(".wallets__show", "click", function (event) {
+  if ($(event.target).closest(".wallets__btns").length) return;
+  $(this).toggleClass("active").next().slideToggle(300);
+  event.stopImmediatePropagation();
 });
 
 // Перемещение у кошельков
-document.querySelectorAll(".wallets__slide").forEach((e) => {
-  e.draggable = true;
-  e.ondragstart = (e) => {
-    e.dataTransfer.setData("id", e.target.id);
-    e.target.classList.add("dragging");
-  };
-  e.ondragover = (e) => {
-    let old = document.querySelector(".over");
-    old && old.classList.remove("over");
-    e.target.classList.add("over");
-    e.preventDefault();
-  };
-  e.ondrop = (e) => {
-    let old = document.querySelector(".dragging");
-    old && old.classList.remove("dragging");
-    old = document.querySelector(".over");
-    old && old.classList.remove("over");
-    let v = e.target.innerHTML;
-    let fromEl = document.querySelector("#" + e.dataTransfer.getData("id"));
-    e.target.innerHTML = fromEl.innerHTML;
-    fromEl.innerHTML = v;
-  };
+const tasksListElement = Array.from(
+  document.querySelectorAll(`.wallets__slide`)
+);
+
+tasksListElement.forEach((element) => {
+  const taskElements = Array.from(
+    element.querySelectorAll(`.slide-wallets__input`)
+  );
+  for (const task of taskElements) {
+    task.draggable = true;
+  }
+  element.addEventListener(`dragstart`, (evt) => {
+    evt.target.classList.add(`selected`);
+  });
+  element.addEventListener(`dragend`, (evt) => {
+    evt.target.classList.remove(`selected`);
+  });
+  element.addEventListener(`dragover`, (evt) => {
+    // Разрешаем сбрасывать элементы в эту область
+    evt.preventDefault();
+
+    // Находим перемещаемый элемент
+    const activeElement = element.querySelector(`.selected`);
+    // Находим элемент, над которым в данный момент находится курсор
+    const currentElement = evt.target;
+    // Проверяем, что событие сработало:
+    // 1. не на том элементе, который мы перемещаем,
+    // 2. именно на элементе списка
+    const isMoveable =
+      activeElement !== currentElement &&
+      currentElement.classList.contains(`slide-wallets__input`);
+
+    // Если нет, прерываем выполнение функции
+    if (!isMoveable) {
+      return;
+    }
+
+    // Находим элемент, перед которым будем вставлять
+    const nextElement =
+      currentElement === activeElement.nextElementSibling
+        ? currentElement.nextElementSibling
+        : currentElement;
+
+    // Вставляем activeElement перед nextElement
+    let parent = activeElement.parentElement;
+    parent.insertBefore(activeElement, nextElement);
+  });
 });
+
+// const allWalletsDrag = document.querySelector(`.all-wallets__drag`);
+// const walletsItems = allWalletsDrag.querySelectorAll(`.wallets__item`);
+
+// for (const wallet of walletsItems) {
+//   wallet.draggable = true;
+// }
+
+// allWalletsDrag.addEventListener(`dragstart`, (evt) => {
+//   evt.target.classList.add(`selected`);
+// });
+
+// allWalletsDrag.addEventListener(`dragend`, (evt) => {
+//   evt.target.classList.remove(`selected`);
+// });
+
+// allWalletsDrag.addEventListener(`dragover`, (evt) => {
+//   // Разрешаем сбрасывать элементы в эту область
+//   evt.preventDefault();
+
+//   // Находим перемещаемый элемент
+//   const activeElement = allWalletsDrag.querySelector(`.selected`);
+//   // Находим элемент, над которым в данный момент находится курсор
+//   const currentElement = evt.target;
+//   // Проверяем, что событие сработало:
+//   // 1. не на том элементе, который мы перемещаем,
+//   // 2. именно на элементе списка
+//   const isMoveable =
+//     activeElement !== currentElement &&
+//     currentElement.classList.contains(`wallets__item`);
+
+//   // Если нет, прерываем выполнение функции
+//   if (!isMoveable) {
+//     return;
+//   }
+
+//   // Находим элемент, перед которым будем вставлять
+//   const nextElement =
+//     currentElement === activeElement.nextElementSibling
+//       ? currentElement.nextElementSibling
+//       : currentElement;
+
+//   let parent = activeElement.parentElement;
+//   console.log(123);
+//   // Вставляем activeElement перед nextElement
+//   parent.insertBefore(activeElement, nextElement);
+// });
 
 // Ховер у попапа с кошельками
 const wallets = document.querySelector("#wallets");
@@ -100,7 +171,12 @@ function hover(parent, children) {
 }
 
 function click(parent, children) {
-  parent.addEventListener("click", (event) => {
-    children.classList.toggle("active");
-  });
+  parent.addEventListener(
+    "click",
+    (event) => {
+      children.classList.toggle("active");
+      event.stopPropagation();
+    },
+    true
+  );
 }
