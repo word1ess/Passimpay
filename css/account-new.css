@@ -233,6 +233,13 @@ ul li a{
 .exchange-block__title-row div{
 position: relative;
 }
+
+
+.exchange-block .wrp_border_title .border_title{
+    position: relative;
+    z-index: 5;
+}
+
 .exchange-block__title-row div:first-child{
     flex: 1 1 calc(50% + 10px);
 }
@@ -240,6 +247,13 @@ position: relative;
     flex: 0 1 25%;
     position: relative;
     left: -5px;
+}
+
+.exchange-block__title-row div:nth-child(2){
+    left: -5px;
+}
+.exchange-block__title-row div:last-child{
+    left: -11px;
 }
 .exchange-block__title-row div a{
     width: 100%;
@@ -261,7 +275,8 @@ position: relative;
     top: -2px;
     left: auto !important;
     border: 0.5px solid #D9E3EE;
-border-radius: 2.5px;
+    border-radius: 2.5px;
+    z-index: 2;
 }
 .exchange-block__title-row .content_menu_soon span{
     font-size: 8px;
@@ -436,6 +451,24 @@ border-radius: 26px;
 .wrp_withdraw {
     grid-template-columns: 1.9fr 1fr;
 }
+
+.exchange-block__title-row a{
+    border: 1px solid #D9E3EE;
+}
+
+
+.exchange-block__item::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    width: 22px;
+    height: 37px;
+    z-index: 0;
+    background:  no-repeat center/ 100% 100% url('../img/corner.png');
+}
+
   
 
 @media only screen and (max-width: 1900px){
@@ -580,13 +613,9 @@ border-radius: 26px;
     z-index: 2;
     transform: translate(0px, -15px);
 }
-.wallets__items{
-    max-height: 263.333px;
-    overflow-y: auto;
-}
 
 .wallets__item {
-    padding: 0px 15px;
+    padding: 0px 10px;
 }
 .wallets__show {
     display: flex;
@@ -624,6 +653,8 @@ border-radius: 26px;
 .wallets__show.active::after{
     transform: translate(0%, -50%) rotate(0deg);
 }
+
+
 .wallets__img {
     display: flex;
     align-items: center;
@@ -773,19 +804,27 @@ border-radius: 26px;
     border-radius: 6.81818px;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .wallets__btn{
     fill: #1843BF;
-
 }
 
-.wallets__btn:hover{
-    background: #3464EC;
+.wallets__btn.active{
+    background: #3464EC !important;
+}
+
+.wallets__btn.active svg{
+    fill: #fff;
 }
 
 .wallets__btn:hover svg{
     fill: #fff;
+}
+
+.wallets__btn__delete{
+    fill: #FF3B2E;
 }
 
 .all-wallets__bg{
@@ -845,7 +884,7 @@ border-radius: 26px;
     width: calc(100% + 10px);
     height: calc(100% + 10px);
     top: -5.2px;
-    left: -5.2px;
+    left: -5px;
     border: 1px solid #C6D6E6;
     border-radius: 50%;
 }
@@ -925,7 +964,18 @@ border-radius: 26px;
     cursor: pointer;
 }
 
+.left{
+    overflow-y: visible;
+}
+
+@media only screen and (max-width: 992px) {
+    .wallets__hover{
+        z-index: -1;
+    }
+
+}
 @media only screen and (max-width: 615px) {
+
     .create-wallet__items{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(40px, 40px));
