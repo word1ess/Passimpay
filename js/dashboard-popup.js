@@ -38,7 +38,7 @@ tasksListElement.forEach((element) => {
     (evt) => {
       // Разрешаем сбрасывать элементы в эту область
       evt.preventDefault();
-
+      evt.dataTransfer.dropEffect = "move";
       // Находим перемещаемый элемент
       const activeElement = element.querySelector(`.selected`);
       // Находим элемент, над которым в данный момент находится курсор
@@ -201,9 +201,13 @@ function click(parent, children) {
   parent.addEventListener(
     "click",
     (event) => {
-      children.classList.toggle("active");
-      event.stopPropagation();
+      if (event.target.classList.contains("balance_total")) {
+        children.classList.toggle("active");
+        event.stopImmediatePropagation();
+      } else {
+        return;
+      }
     },
-    true
+    { capture: true }
   );
 }
