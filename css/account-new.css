@@ -663,13 +663,12 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
 .wallets__hover.active{
     opacity: 1;
-    z-index: 2;
+    z-index: 3;
     transform: translate(0px, -15px);
 }
 
 .wallets__item {
     padding: 0px 10px;
-
 }
 .wallets__show {
     display: flex;
@@ -681,6 +680,22 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     border-style: solid;
     border-color: #C6D6E6;
 }
+
+.all-wallets__drag .wallets__item{
+    cursor: pointer;
+}
+
+.all-wallets__drag .wallets__lines {
+    cursor: grab;
+}
+.all-wallets__drag .wallets__item.selected{
+    cursor: grabbing !important;
+}
+
+.all-wallets__drag .wallets__item.move{
+    cursor: move !important;
+}
+
 
 .wallets__item:first-child .wallets__show, .wallets__item:last-child .wallets__show{
     border-color: #fff;  
@@ -857,7 +872,6 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 .all-wallets__row .wallets__show{
     flex-direction: row;
     padding: 10px 30px 10px 0px;
-    cursor: pointer;
 }
 
 
@@ -1041,6 +1055,11 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 @media only screen and (max-width: 992px) {
     .wallets__hover{
         z-index: -1;
+    }
+    .wallets__hover.active{
+        opacity: 1;
+        z-index: 3;
+        transform: translate(0px, 10px);
     }
 
 }
