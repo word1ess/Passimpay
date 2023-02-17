@@ -17,93 +17,120 @@ tasksListElement.forEach((element) => {
   for (const task of taskElements) {
     task.draggable = true;
   }
-  element.addEventListener(`dragstart`, (evt) => {
+  element.addEventListener(
+    `dragstart`,
+    (evt) => {
+      evt.target.classList.add(`selected`);
+      evt.stopImmediatePropagation();
+    },
+    true
+  );
+  element.addEventListener(
+    `dragend`,
+    (evt) => {
+      evt.target.classList.remove(`selected`);
+      evt.stopImmediatePropagation();
+    },
+    true
+  );
+  element.addEventListener(
+    `dragover`,
+    (evt) => {
+      // Разрешаем сбрасывать элементы в эту область
+      evt.preventDefault();
+
+      // Находим перемещаемый элемент
+      const activeElement = element.querySelector(`.selected`);
+      // Находим элемент, над которым в данный момент находится курсор
+      const currentElement = evt.target;
+      // Проверяем, что событие сработало:
+      // 1. не на том элементе, который мы перемещаем,
+      // 2. именно на элементе списка
+      const isMoveable =
+        activeElement !== currentElement &&
+        currentElement.classList.contains(`slide-wallets__input`);
+
+      // Если нет, прерываем выполнение функции
+      if (!isMoveable) {
+        return;
+      }
+
+      // Находим элемент, перед которым будем вставлять
+      const nextElement =
+        currentElement === activeElement.nextElementSibling
+          ? currentElement.nextElementSibling
+          : currentElement;
+
+      // Вставляем activeElement перед nextElement
+      let parent = activeElement.parentElement;
+      parent.insertBefore(activeElement, nextElement);
+      evt.stopImmediatePropagation();
+    },
+    true
+  );
+});
+
+const allWalletsDrag = document.querySelector(`.all-wallets__drag`);
+const walletsItems = allWalletsDrag.querySelectorAll(`.wallets__item`);
+
+for (const wallet of walletsItems) {
+  wallet.draggable = true;
+}
+
+allWalletsDrag.addEventListener(
+  `dragstart`,
+  (evt) => {
     evt.target.classList.add(`selected`);
-  });
-  element.addEventListener(`dragend`, (evt) => {
+    evt.stopImmediatePropagation();
+  },
+  true
+);
+
+allWalletsDrag.addEventListener(
+  `dragend`,
+  (evt) => {
     evt.target.classList.remove(`selected`);
-  });
-  element.addEventListener(`dragover`, (evt) => {
+    evt.stopImmediatePropagation();
+  },
+  true
+);
+
+allWalletsDrag.addEventListener(
+  `dragover`,
+  (evt) => {
     // Разрешаем сбрасывать элементы в эту область
     evt.preventDefault();
 
     // Находим перемещаемый элемент
-    const activeElement = element.querySelector(`.selected`);
+    const activeElement = allWalletsDrag.querySelector(`.selected`);
     // Находим элемент, над которым в данный момент находится курсор
-    const currentElement = evt.target;
+    const currentElement = evt.target.parentElement;
     // Проверяем, что событие сработало:
     // 1. не на том элементе, который мы перемещаем,
     // 2. именно на элементе списка
     const isMoveable =
       activeElement !== currentElement &&
-      currentElement.classList.contains(`slide-wallets__input`);
+      currentElement.classList.contains(`wallets__item`, "wallets__show");
 
     // Если нет, прерываем выполнение функции
-    if (!isMoveable) {
-      return;
-    }
+    // if (!isMoveable) {
+    //   return;
+    // }
 
     // Находим элемент, перед которым будем вставлять
     const nextElement =
       currentElement === activeElement.nextElementSibling
         ? currentElement.nextElementSibling
         : currentElement;
-
     // Вставляем activeElement перед nextElement
-    let parent = activeElement.parentElement;
-    parent.insertBefore(activeElement, nextElement);
-  });
-});
-
-// const allWalletsDrag = document.querySelector(`.all-wallets__drag`);
-// const walletsItems = allWalletsDrag.querySelectorAll(`.wallets__item`);
-
-// for (const wallet of walletsItems) {
-//   wallet.draggable = true;
-// }
-
-// allWalletsDrag.addEventListener(`dragstart`, (evt) => {
-//   evt.target.classList.add(`selected`);
-// });
-
-// allWalletsDrag.addEventListener(`dragend`, (evt) => {
-//   evt.target.classList.remove(`selected`);
-// });
-
-// allWalletsDrag.addEventListener(`dragover`, (evt) => {
-//   // Разрешаем сбрасывать элементы в эту область
-//   evt.preventDefault();
-
-//   // Находим перемещаемый элемент
-//   const activeElement = allWalletsDrag.querySelector(`.selected`);
-//   // Находим элемент, над которым в данный момент находится курсор
-//   const currentElement = evt.target;
-//   // Проверяем, что событие сработало:
-//   // 1. не на том элементе, который мы перемещаем,
-//   // 2. именно на элементе списка
-//   const isMoveable =
-//     activeElement !== currentElement &&
-//     currentElement.classList.contains(`wallets__item`);
-
-//   // Если нет, прерываем выполнение функции
-//   if (!isMoveable) {
-//     return;
-//   }
-
-//   // Находим элемент, перед которым будем вставлять
-//   const nextElement =
-//     currentElement === activeElement.nextElementSibling
-//       ? currentElement.nextElementSibling
-//       : currentElement;
-
-//   let parent = activeElement.parentElement;
-//   console.log(123);
-//   // Вставляем activeElement перед nextElement
-//   parent.insertBefore(activeElement, nextElement);
-// });
+    allWalletsDrag.insertBefore(activeElement, nextElement);
+    evt.stopImmediatePropagation();
+  },
+  true
+);
 
 // Ховер у попапа с кошельками
-const wallets = document.querySelector("#wallets");
+const wallets = document.querySelector(".wallets");
 if (wallets) {
   const walletsHover = document.querySelector(".wallets__hover");
 
