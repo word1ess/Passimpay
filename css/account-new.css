@@ -730,6 +730,10 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     transform: translate(0%, -50%) rotate(0deg);
 }
 
+.wallets__items{
+    max-height: 258px;
+    overflow-y: auto;
+}
 
 .wallets__img {
     display: flex;
