@@ -651,7 +651,7 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 .wallets__hover {
     position: absolute;
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
     width: 100%;
     background: #FFFFFF;
     border: 1px solid #D9E3EE;
@@ -674,7 +674,7 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     display: flex;
     position: relative;
     gap: 10px;
-    padding: 10px 5px;
+    padding: 15px 5px;
     background: #fff;
     border-width: 1px 0px;
     border-style: solid;
@@ -826,6 +826,10 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     border-color: #C6D6E6;
 }
 
+.slide-wallets__input .wallets__btn{
+    background: #fff;
+}
+
 .slide-wallets__input.flex-row{
     align-items: center;
     gap: 10px;
@@ -866,13 +870,13 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     border: 1px solid #D9E3EE;
     border-radius: 10px;
     margin: 0px 0px 10px;
-    max-height: 285px;
+    max-height: 321px;
     overflow-y: auto;
 }
 
 .all-wallets__row .wallets__show{
     flex-direction: row;
-    padding: 10px 30px 10px 0px;
+    padding: 15px 30px 15px 0px;
     align-items: center;
 }
 
@@ -883,7 +887,7 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     margin-left: auto;
 }
 .wallets__items{
-    max-height: 258px;
+    max-height: 312px;
     overflow-y: auto;
 }
 .wallets__btn{
