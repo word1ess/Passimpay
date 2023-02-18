@@ -975,9 +975,9 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 .create-wallet__item:hover::before, .create-wallet__item.active::before{
     content: '';
     position: absolute;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    top: -5.2px;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
     left: -5px;
     border: 1px solid #C6D6E6;
     border-radius: 50%;
