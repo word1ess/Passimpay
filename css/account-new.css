@@ -669,6 +669,7 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
 .wallets__item {
     padding: 0px 10px;
+    cursor: pointer;
 }
 .wallets__show {
     display: flex;
@@ -824,6 +825,7 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     border-width: 1px 0px;
     border-style: solid;
     border-color: #C6D6E6;
+    cursor: pointer;
 }
 
 .slide-wallets__input .wallets__btn{
