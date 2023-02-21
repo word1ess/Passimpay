@@ -111,6 +111,31 @@
     gap: 10px;
 }
 
+.exchange-wide{
+    margin: 0px 0px 11px;
+}
+
+.echange-wide__items{
+    display: flex;
+    gap: 10px;
+    margin: 0px 0px 13px;
+}
+
+.echange-wide__items div{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 5px;
+    color: #1843BF;
+    cursor: pointer;
+}
+.echange-wide__items div.active{
+    background: #1843BF;
+    color: #fff;
+}
+
 .content_menu li{
     border-radius: 20px;
     padding:20px 20px 10px 20px;
@@ -669,7 +694,6 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
 .wallets__item {
     padding: 0px 10px;
-    cursor: pointer;
 }
 .wallets__show {
     display: flex;
@@ -825,7 +849,6 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     border-width: 1px 0px;
     border-style: solid;
     border-color: #C6D6E6;
-    cursor: pointer;
 }
 
 .slide-wallets__input .wallets__btn{
@@ -1086,3 +1109,381 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     }
 
 }
+
+.transfer-block__steps{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 0px 10px;
+}
+
+.transfer-block__steps::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #D9E3EE;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    z-index: 0;
+}
+
+.transfer-block__step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 0px;
+}
+
+.transfer-block__step .transfer-block__round{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #D9E3EE;
+    border-radius: 56px;
+    margin: 0px 0px 5px;
+    position: relative;
+    z-index: 2;
+
+    line-height: 21px;
+}
+.transfer-block__step p{
+    text-align: center;
+    line-height: 14px;
+}
+
+.transfer-block__step.active .transfer-block__round{
+    background: #1843BF;
+    color: #fff;
+}
+
+.transfer-block__step.active p{
+    color: #3399FF;
+}
+
+
+.transaction-chart{
+    display: flex;
+    gap: 30px;
+}
+
+.item_transaction{
+    background: #F5F8FB;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.item_transaction__link{
+    border-bottom: 1px solid #D9E3EE;
+    cursor: pointer;
+}
+.item_transaction__header{
+    padding: 0px 0px 12px;
+    border-bottom: 1px solid #D9E3EE;
+}
+.transaction-chart__create{
+    flex: 0 0 454px;
+    max-height: 329px;
+}
+.transaction-chart__chart{
+    flex: 1 1 auto;
+}
+.chart-transaction__num{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+.chart-transaction__num .num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #1843BF;
+    border-radius: 10px;
+}
+.chart-transaction__num p{
+    margin: 0px;
+}
+
+.chart-transaction__list{
+    display: flex;
+    gap: 10px;
+}
+.chart-transaction__list #date, .chart-transaction__list #type{
+    display: flex;
+    position: relative;
+    width: 180px;
+    background: #F5F8FB;
+    border-radius: 10px;
+    padding: 13px 10px;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.chart-transaction__list #date::after, 
+.chart-transaction__list #type::after,
+.chart-transaction__list #date::before,
+.chart-transaction__list #type::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 2px;
+    background: #9FA8B1;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+
+.chart-transaction__list #date::before,
+.chart-transaction__list #type::before{
+    rotate: 45deg;
+    right: 23px;
+}
+
+.chart-transaction__list #date::after, 
+.chart-transaction__list #type::after{
+    rotate: -45deg;
+    right: 17px;
+}
+
+.transaction-history{
+    display: flex;
+    gap: 30px;
+}
+
+
+.transaction-history__item{
+    flex: 1 1 25%;
+    padding: 10px 20px;
+    background: #FFFFFF;
+    border: 1px solid #D9E3EE;
+    box-shadow: 0px 30px 70px #DBE9F6;
+    border-radius: 20px;
+}
+
+.transaction-history__status{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0px 0px 10px;
+}
+
+.transaction-history__sum{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.transaction-history__item__create .transaction-history__sum{
+    color: #3399FF;
+}
+.transaction-history__item__success .transaction-history__sum{
+    color: #33CC66;
+}
+.transaction-history__item__half .transaction-history__sum{
+    color: #FEB46D;
+}
+.transaction-history__item__success .transaction-history__sum{
+    color: #FF3B2E;
+}
+
+.transaction-history__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.transaction-history__count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #1843BF;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.transaction-history__count__disable{
+    background: #C6D6E6;
+
+}
+
+.table-slide{
+    display: none;
+    border-top: 1px solid #D9E3EE;
+    position: relative;
+}
+
+.table-slide td{
+    padding-top: 25px;
+}
+
+.table-slide::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: #9FA8B1;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+
+
+.table-slide__title{
+    width: fit-content;
+    position: relative;
+    line-height: 18px;
+    color: #343434;
+}
+
+.table-slide__title .hint__img{
+    position: absolute;
+    top: 0;
+    right: -20px;
+}
+
+
+.hint__img{
+    position: relative;
+}
+
+.hint__img:before, .hint__img:after {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hint__img:before {
+    content: attr(data-tooltip);
+    position: absolute; bottom: 110%; left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3.5px);
+    border-radius: 5px;
+    width: 245px;
+    z-index: 3;
+    top: -107px;
+    right: -148px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 12px;
+}
+.hint__img:after {
+    content:" ";
+    position: absolute; bottom: 110%; left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid rgba(0, 0, 0, 0.8);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;    
+    font-size: 0;
+    line-height: 0;
+}
+.hint__img:hover:before, .hint__img:hover:after {
+    visibility: visible;
+    opacity: 1;
+}
+
+#create-bill .success{
+    background: #ECFFF9;
+    border: 1px solid #33CC66;
+    padding: 13px 20px;
+    border-radius: 10px;
+}
+
+#create-bill .success span{
+    color: #33CC66;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.info__item{
+    padding: 14px 20px;
+    background: #E6EEF8;
+    border-radius: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 1800px){
+
+}
+@media only screen and (max-width: 1700px) {
+
+}
+@media (max-width: 1600px){
+
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .transaction-history{
+        flex-wrap: wrap;
+    }
+    .transaction-history__item{
+        flex: 1 1 calc(50% - 15px);
+    }
+    .transaction-chart{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+}
+
+@media only screen and (max-width: 900px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+    .transaction-history__item{
+        flex: 1 1 100%;
+    }
+    .main{
+        padding: 0px 10px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .table-transaction{
+        min-width: 900px;
+    }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+    .chart-transaction__header{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .transaction-chart__create{
+        flex: none;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 378px) {
+}
+
