@@ -1294,7 +1294,7 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 .transaction-history__item__half .transaction-history__sum{
     color: #FEB46D;
 }
-.transaction-history__item__success .transaction-history__sum{
+.transaction-history__item__error .transaction-history__sum{
     color: #FF3B2E;
 }
 
