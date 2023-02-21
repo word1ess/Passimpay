@@ -1320,17 +1320,75 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
 }
 
+
 .table-slide{
-    display: none;
     border-top: 1px solid #D9E3EE;
     position: relative;
 }
 
-.table-slide td{
-    padding-top: 25px;
+.table-transaction tr td:nth-child(3){
+    width: 314px;
+    max-width: 314px;
 }
 
-.table-slide::after{
+.table-slide td div{
+    max-height: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0s;
+}
+
+.table-slide td{
+    padding: 0px;
+}
+
+.table-slide__text.copy-text{
+    position: relative;
+    max-width: fit-content;
+    height: calc(100% + 30px);
+    overflow: visible;
+    cursor: pointer;
+    color: #1843BF;
+    border-bottom: 1px solid #C6D6E6;
+    font-weight: 700;
+}
+
+.table-slide__text.copy-text::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    width: 20px;
+    height: 21px;
+    background: url(../svg/copy_partner_link.svg) no-repeat center;
+    transform: translateY(-50%);
+    display: none;
+    cursor: pointer;
+}
+.table-slide .table-slide__title{
+    margin: 0px;
+}
+
+.table-slide.active .table-slide__title{
+    margin: 0px 0px 5px;
+    overflow: visible;
+}
+
+.table-slide.active .table-slide__text.copy-text::after{
+   display: block;
+}
+
+.table-slide.active td{
+    padding: 25px 10px 10px;
+}
+
+.table-slide.active td div{
+    max-height: 100px;
+    transition: max-height 0.6s, padding 0s;
+}
+
+
+.table-slide.active::after{
     content: '';
     position: absolute;
     height: 1px;
@@ -1358,6 +1416,7 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
 .hint__img{
     position: relative;
+
 }
 
 .hint__img:before, .hint__img:after {
@@ -1418,6 +1477,73 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     border-radius: 10px;
 }
 
+.transaction-chart__dropdown{
+    display: block;
+    position: relative;
+    background: #FFFFFF;
+    width: 100%;
+    text-align: left;
+    padding: 9px 10px;
+
+    border: 1px solid #C6D6E6;
+    border-radius: 10px;
+}
+
+.dropdown-content{
+    display: none;
+    background: #FFFFFF;
+    width: 100%;
+    text-align: left;
+    padding: 9px 10px;
+
+    border: 1px solid #C6D6E6;
+    border-radius: 10px; 
+}
+
+.dropdown-content.active{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 45px;
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+.transaction-chart__dropdown::before, .transaction-chart__dropdown::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: #000099;
+    top: 50%;
+    transform: translate(0%, -50%);
+    transition: all 300ms ease;
+}
+
+.transaction-chart__dropdown::before{
+    transform: rotate(45deg);
+    right: 17px;
+}
+
+.transaction-chart__dropdown::after{
+    transform: rotate(-45deg);
+    right: 10px;
+}
+
+.transaction-chart__dropdown.active::before{
+    transform: rotate(-45deg);
+}
+
+.transaction-chart__dropdown.active::after{
+    transform: rotate(45deg);
+}
+
 
 
 
@@ -1454,9 +1580,6 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 }
 
 @media only screen and (max-width: 768px) {
-    .transaction-history__item{
-        flex: 1 1 100%;
-    }
     .main{
         padding: 0px 10px;
     }
@@ -1476,10 +1599,16 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
         flex-wrap: wrap;
         gap: 10px;
     }
+    .transaction-history__item{
+        flex: 1 1 100%;
+    }
 
     .transaction-chart__create{
         flex: none;
         width: 100%;
+    }
+    .transaction-history{
+        gap: 10px;
     }
 
 }
