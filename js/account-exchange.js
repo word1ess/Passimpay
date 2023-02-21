@@ -1,6 +1,13 @@
 const transferBlocks = Array.from(document.querySelectorAll(".transfer-block"));
 const transferLinks = Array.from(document.querySelectorAll("._transfer-link"));
 
+const transferBlockLinks = Array.from(
+  document.querySelectorAll(".transfer-block__link")
+);
+const transferBlockBlocks = Array.from(
+  document.querySelectorAll(".border_block")
+);
+
 const exchangeBlocks = Array.from(document.querySelectorAll(".exchange-block"));
 const exchangeBlocksBottom = Array.from(
   document.querySelectorAll(".exchange-block__bottom")
@@ -49,6 +56,7 @@ if (exchangeLink) {
         exchangeStatus[0].classList.add("success");
         exchangeStatusText = "Завершено";
         exchangeIcon.classList.remove("animation-playing");
+        exchangeIcon.classList.remove("follow-the-leader");
         exchangeIcon.innerHTML = `
           <img src="svg/success.svg" alt="">
         `;
@@ -66,9 +74,10 @@ if (exchangeLink) {
     exchangeBlocksBottom[index].style.display = "none";
     exchangeId.style.display = "none";
     exchangeIcon.innerHTML = `
-      <img src="svg/loading.svg" alt="">
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     `;
     exchangeIcon.classList.add("animation-playing");
+    exchangeIcon.classList.add("follow-the-leader");
     exchangeBlocks[1].style.display = "none";
     exchangeStatus[0].classList.remove("success");
     exchangeRight.style.display = "block";
@@ -104,4 +113,31 @@ function nav(blocks, links) {
   }
 }
 
+// function nav(blocks, links, steps) {
+//   if (links[0]) {
+//     steps[0].classList.add("active");
+//     blocks[0].style.display = "block";
+
+//     links.forEach((link) => {
+//       link.addEventListener("click", toggleActiveBlock);
+//     });
+
+//     function toggleActiveBlock() {
+//       hideAllBlock(links, blocks);
+//       let index = links.indexOf(this);
+//       this.steps.add("active");
+//       blocks[index].style.display = "block";
+//     }
+//     function hideAllBlock(linksArr, blocksArr) {
+//       linksArr.forEach((link) => {
+//         steps.classList.remove("active");
+//       });
+//       blocksArr.forEach((block) => {
+//         block.style.display = "none";
+//       });
+//     }
+//   }
+// }
+
 nav(transferBlocks, transferLinks);
+nav(transferBlockBlocks, transferBlockLinks);

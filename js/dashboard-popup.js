@@ -82,6 +82,7 @@ allWalletsDrag.addEventListener(
   (evt) => {
     evt.target.classList.add(`selected`);
     evt.stopImmediatePropagation();
+    evt.target.style.cursor = "move";
   },
   true
 );
@@ -91,6 +92,7 @@ allWalletsDrag.addEventListener(
   (evt) => {
     evt.target.classList.remove(`selected`);
     evt.stopImmediatePropagation();
+    evt.target.style.cursor = "default";
   },
   true
 );
@@ -111,12 +113,6 @@ allWalletsDrag.addEventListener(
     const isMoveable =
       activeElement !== currentElement &&
       currentElement.classList.contains(`wallets__item`, "wallets__show");
-
-    // Если нет, прерываем выполнение функции
-    // if (!isMoveable) {
-    //   return;
-    // }
-
     // Находим элемент, перед которым будем вставлять
     const nextElement =
       currentElement === activeElement.nextElementSibling
@@ -201,7 +197,10 @@ function click(parent, children) {
   parent.addEventListener(
     "click",
     (event) => {
-      if (event.target.classList.contains("balance_total")) {
+      if (
+        event.target.classList.contains("balance_total") ||
+        event.target.classList.contains("_wallets-img")
+      ) {
         children.classList.toggle("active");
         event.stopImmediatePropagation();
       } else {
