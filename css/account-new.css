@@ -1585,6 +1585,9 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     .table-transaction{
         min-width: 900px;
     }
+    .transaction-history{
+        gap: 10px;
+    }
 
 }
 
@@ -1594,9 +1597,6 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
         flex-wrap: wrap;
         gap: 10px;
     }
-    .transaction-history__item{
-        flex: 1 1 100%;
-    }
 
     .transaction-chart__create{
         flex: none;
@@ -1605,9 +1605,18 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     .transaction-history{
         gap: 10px;
     }
+    .transaction-history__status{
+        font-size: 14px;
+    }
+    .transaction-history__sum{
+        font-size: 12px;
+    }
 
 }
 
 @media only screen and (max-width: 378px) {
+    .transaction-history__item{
+        flex: 1 1 100%;
+    }
 }
 
