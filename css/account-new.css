@@ -2244,12 +2244,13 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 .wallets__items__transaction .wallets__slide{
     display: block;
     position: absolute;
-    z-index: -1;
+    z-index: -1 !important;
     width: 250px;
     max-height: 292px;
     overflow-y: auto;
     padding: 10px;
     background: #FFFFFF;
+    opacity: 0;
 
     border: 1px solid #D9E3EE;
 
@@ -2260,14 +2261,17 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
 .wallets__items__transaction .wallets__show:hover + .wallets__slide{
     z-index: 2;
+    opacity: 1;
 }
 
 
 .wallets__items__transaction .wallets__slide.active{
     z-index: 2;
+    opacity: 1;
 }
 .wallets__items__transaction .wallets__slide:hover{
     z-index: 2;
+    opacity: 1;
 }
 .slide-wallets__input .wallets__balance{
     color: #9FA8B1;
