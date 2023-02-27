@@ -1,13 +1,14 @@
 const transferBlocks = Array.from(document.querySelectorAll(".transfer-block"));
 const transferLinks = Array.from(document.querySelectorAll("._transfer-link"));
-
+const transferSteps = Array.from(
+  document.querySelectorAll(".transfer-block__step")
+);
 const transferBlockLinks = Array.from(
   document.querySelectorAll(".transfer-block__link")
 );
 const transferBlockBlocks = Array.from(
   document.querySelectorAll(".border_block")
 );
-
 const exchangeBlocks = Array.from(document.querySelectorAll(".exchange-block"));
 const exchangeBlocksBottom = Array.from(
   document.querySelectorAll(".exchange-block__bottom")
@@ -24,11 +25,14 @@ const exchangeLinkSecond = document.querySelector("._exchange-link-second");
 // Здесь тоже самое, что и в верстке - только для демоснтрации разных блоков
 if (exchangeLink) {
   exchangeBlocks[0].style.display = "flex";
+  transferSteps[0].classList.add("active");
   exchangeId.style.display = "none";
 
   // Первая кнопка - Отправить
   exchangeLink.onclick = () => {
     exchangeBlocks[0].style.display = "none";
+    transferSteps[0].classList.remove("active");
+    transferSteps[1].classList.add("active");
     exchangeBlocks[1].style.display = "block";
     exchangeBlocksBottom[0].style.display = "block";
   };
@@ -39,6 +43,8 @@ if (exchangeLink) {
   function exchangeClick(e) {
     exchangeBlocksBottom[index].style.display = "none";
     exchangeBlocksBottom[index + 1].style.display = "block";
+    transferSteps[index + 1].classList.remove("active");
+    transferSteps[index + 2].classList.add("active");
     index += 1;
 
     switch (index) {
@@ -50,6 +56,7 @@ if (exchangeLink) {
         exchangeRight.style.display = "none";
         exchangeId.style.display = "flex";
         exchangeStatus[0].classList.add("loading");
+        transferSteps[1].style.display = "none";
         break;
       case 2:
         exchangeStatus[0].classList.remove("loading");
@@ -83,13 +90,16 @@ if (exchangeLink) {
     exchangeRight.style.display = "block";
     exchangeBlocks[0].style.display = "block";
     exchangeStatus[0].innerHTML = "Ожидание депозита";
+    transferSteps[1].style.display = "block";
+    transferSteps[0].classList.add("active");
+    transferSteps[3].classList.remove("active");
     index = 0;
   };
 }
 // Общие стили для переключения табов
-function nav(blocks, links) {
+function nav(blocks, links, activeClass, secondClass = "") {
   if (links[0]) {
-    links[0].classList.add("active");
+    links[0].classList.add(activeClass);
     blocks[0].style.display = "block";
 
     links.forEach((link) => {
@@ -99,12 +109,19 @@ function nav(blocks, links) {
     function toggleActiveBlock() {
       hideAllBlock(links, blocks);
       let index = links.indexOf(this);
-      this.classList.add("active");
+      this.classList.add(activeClass);
       blocks[index].style.display = "block";
+
+      links.forEach((link) => {
+        if (link != this) {
+          link.classList.add(secondClass);
+        }
+      });
     }
+
     function hideAllBlock(linksArr, blocksArr) {
       linksArr.forEach((link) => {
-        link.classList.remove("active");
+        link.classList.remove(activeClass);
       });
       blocksArr.forEach((block) => {
         block.style.display = "none";
@@ -113,31 +130,39 @@ function nav(blocks, links) {
   }
 }
 
-// function nav(blocks, links, steps) {
-//   if (links[0]) {
-//     steps[0].classList.add("active");
-//     blocks[0].style.display = "block";
+nav(transferBlocks, transferLinks, "active");
+nav(
+  transferBlockBlocks,
+  transferBlockLinks,
+  "border_title",
+  "exchange-block__item"
+);
 
-//     links.forEach((link) => {
-//       link.addEventListener("click", toggleActiveBlock);
-//     });
+// Чекбокс и статус защищенности
+const checkBoxVpm = document.querySelector("#check-vpm");
+const vpmStatus = document.querySelector(".vpm-volatility__status");
 
-//     function toggleActiveBlock() {
-//       hideAllBlock(links, blocks);
-//       let index = links.indexOf(this);
-//       this.steps.add("active");
-//       blocks[index].style.display = "block";
-//     }
-//     function hideAllBlock(linksArr, blocksArr) {
-//       linksArr.forEach((link) => {
-//         steps.classList.remove("active");
-//       });
-//       blocksArr.forEach((block) => {
-//         block.style.display = "none";
-//       });
-//     }
-//   }
-// }
+if (checkBoxVpm) {
+  let vpbStatusChildren = Array.from(vpmStatus.children);
+  vpbStatusChildren[0].classList.add("active");
 
-nav(transferBlocks, transferLinks);
-nav(transferBlockBlocks, transferBlockLinks);
+  checkBoxVpm.addEventListener("click", function (e) {
+    if (
+      e.target.classList.contains("checkbox-ios-switch") ||
+      e.target.classList.contains("checkbox-ios")
+    ) {
+      checkBoxVpm.classList.toggle("active");
+      vpbStatusChildren.forEach((el) => {
+        el.classList.toggle("active");
+      });
+    }
+  });
+}
+
+// slider
+
+const rangeValue = document.querySelector("#rangeValue");
+
+function rangeSlide(value) {
+  rangeValue.innerHTML = `${value}%`;
+}
