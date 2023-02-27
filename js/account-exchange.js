@@ -128,6 +128,13 @@ function nav(blocks, links, activeClass, secondClass = "") {
       });
     }
   }
+  if (transferLinks[0].classList.contains("border_title")) {
+    document.querySelector("#withdraw-info-first").style.display = "flex";
+    document.querySelector("#withdraw-info-second").style.display = "none";
+  } else {
+    document.querySelector("#withdraw-info-second").style.display = "flex";
+    document.querySelector("#withdraw-info-first").style.display = "none";
+  }
 }
 
 nav(transferBlocks, transferLinks, "active");
