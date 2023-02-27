@@ -117,6 +117,17 @@ function nav(blocks, links, activeClass, secondClass = "") {
           link.classList.add(secondClass);
         }
       });
+      if (
+        document
+          .querySelector(".transfer-block__link")
+          .classList.contains("border_title")
+      ) {
+        document.querySelector("#withdraw-info-first").style.display = "grid";
+        document.querySelector("#withdraw-info-second").style.display = "none";
+      } else {
+        document.querySelector("#withdraw-info-second").style.display = "block";
+        document.querySelector("#withdraw-info-first").style.display = "none";
+      }
     }
 
     function hideAllBlock(linksArr, blocksArr) {
@@ -127,13 +138,6 @@ function nav(blocks, links, activeClass, secondClass = "") {
         block.style.display = "none";
       });
     }
-  }
-  if (transferLinks[0].classList.contains("border_title")) {
-    document.querySelector("#withdraw-info-first").style.display = "flex";
-    document.querySelector("#withdraw-info-second").style.display = "none";
-  } else {
-    document.querySelector("#withdraw-info-second").style.display = "flex";
-    document.querySelector("#withdraw-info-first").style.display = "none";
   }
 }
 
