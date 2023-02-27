@@ -99,6 +99,9 @@
     height: 38px;
 }
 
+.exchange-choose__item:not(.active):hover{
+    background: #fff;
+}
 .exchange-wrp_input{
     padding: 0px;
 }
@@ -1518,7 +1521,8 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     background: #FFFFFF;
     width: 100%;
     text-align: left;
-    padding: 9px 10px;
+    padding: 15px 10px;
+    cursor: pointer;
 
     border: 1px solid #C6D6E6;
     border-radius: 10px;
@@ -1532,7 +1536,8 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     padding: 9px 10px;
 
     border: 1px solid #C6D6E6;
-    border-radius: 10px; 
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .dropdown-content.active{
@@ -2196,17 +2201,18 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 }
 
 .wallets__items__transaction .wallets__item{
-    width: 250px;
     border: 1px solid #CEDEF1;
     border-radius: 10px;
     padding: 0px;
     position: relative;
     overflow-x: visible;
+    padding: 0px;
 }
+
 
 .wallets__items__transaction .wallets__show{
     border: none;
-    padding: 5px;
+    padding: 5px 0px 5px 5px;
     border-radius: 10px;
     cursor: pointer;
     width: 250px;
@@ -2217,13 +2223,16 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     color: #fff;
 
 }
+
+.wallets__show.active .wallets__img{
+    border: 2px solid #fff;
+}
 .wallets__items__transaction .wallets__show::after{
     display: none;
 }
 
 .wallets__items__transaction .wallets__img{
     border-radius: 5px;
-    border: 2px solid #fff;
 }
 
 .wallets__items__transaction .wallets__info{
@@ -2233,8 +2242,9 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 }
 
 .wallets__items__transaction .wallets__slide{
+    display: block;
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     width: 250px;
     max-height: 292px;
     overflow-y: auto;
@@ -2248,6 +2258,17 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     transform: translate(0px, 5px);
 }
 
+.wallets__items__transaction .wallets__show:hover + .wallets__slide{
+    z-index: 2;
+}
+
+
+.wallets__items__transaction .wallets__slide.active{
+    z-index: 2;
+}
+.wallets__items__transaction .wallets__slide:hover{
+    z-index: 2;
+}
 .slide-wallets__input .wallets__balance{
     color: #9FA8B1;
 }
@@ -2263,6 +2284,37 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 .withdraw_right .btn_open_list_partners{
     margin-bottom: 20px !important;
 }
+
+.currency_selected_balance_arrow{
+    background: #C6D6E6;
+}
+.show .currency_selected_balance_arrow{
+    background: #C6D6E6;
+}
+
+#withdraw-info-first, #withdraw-info-second{
+    display: none;
+}
+
+#withdraw-info-second > div:nth-child(1){
+    flex-direction: column !important;
+    width: 100% !important;
+}
+
+#withdraw-info-second > div:nth-child(1) > div{
+    width: 100% !important;
+}
+
+.w-200{
+    max-width: 200px;
+    word-wrap: break-word;
+    text-align: right;
+}
+.w-165{
+    max-width: 165px;
+}
+
+
 @media only screen and (max-width: 1800px){
 
 }
