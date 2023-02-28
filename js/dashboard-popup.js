@@ -218,7 +218,7 @@ const walletsHoverParent = Array.from(
 
 if (walletsHoverParent && window.screen.width < 992) {
   walletsHoverParent.forEach((el) => {
-    // el.classList.add("wallets__show");
+    el.classList.add("wallets__show");
   });
 }
 
