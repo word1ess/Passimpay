@@ -171,7 +171,6 @@ if (checkBoxVpm) {
 }
 
 // slider
-
 const rangeValue = document.querySelector("#rangeValue");
 
 function rangeSlide(value) {

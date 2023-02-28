@@ -190,9 +190,7 @@ function hover(parent, children) {
     children.classList.add("active");
   });
   parent.addEventListener("mouseout", () => {
-    setTimeout(() => {
-      children.classList.remove("active");
-    }, 300);
+    children.classList.remove("active");
   });
 }
 
@@ -228,5 +226,26 @@ if (walletsHoverParent) {
   });
   walletsHoverChildren.forEach((el) => {
     hover(el, el);
+  });
+}
+
+const slideWalletsInput = Array.from(
+  document.querySelectorAll(".slide-wallets__input__hover")
+);
+
+if (slideWalletsInput[0]) {
+  slideWalletsInput.forEach((el) => {
+    el.onclick = function (e) {
+      if (e.target.tagName == "INPUT") {
+        walletsHoverParent.forEach((el) => {
+          el.classList.remove("active");
+        });
+        this.classList.toggle("active");
+        this.parentElement.previousElementSibling.classList.add("active");
+        if (slideWalletsInput.every((el) => !el.classList.contains("active"))) {
+          this.parentElement.previousElementSibling.classList.remove("active");
+        }
+      }
+    };
   });
 }
