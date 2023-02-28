@@ -1796,6 +1796,337 @@
 							статистику платежей, а также историю всех счетов.
 						</div>
 					</div>
+					<div class="mb-10">
+		
+						<div class="history_filter">
+							<div>
+								<div class="input wrp_reset_filter">
+									<input type="text" name="amount" value="" placeholder="Поиск по сумме, ID, кошельку" class="icon_search" autocomplete="off">
+									<button type="button" class="reset_filter"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4347 10.42C10.3146 10.5401 10.1646 10.5852 10.0146 10.5852C9.86456 10.5852 9.71456 10.5255 9.59444 10.42L5.49989 6.32484L1.40474 10.42C1.28463 10.5401 1.13462 10.5999 0.984622 10.5999C0.834622 10.5999 0.684622 10.5401 0.564502 10.4346C0.339502 10.2096 0.339502 9.83463 0.564502 9.60963L4.6748 5.49993L0.565102 1.40478C0.340102 1.17978 0.340102 0.804784 0.565102 0.579784C0.790102 0.354784 1.1651 0.354784 1.3901 0.579784L5.4998 4.67493L9.59495 0.565234C9.81995 0.340234 10.195 0.340234 10.42 0.565234C10.645 0.790234 10.645 1.16523 10.42 1.39023L6.3248 5.49993L10.4345 9.59508C10.6595 9.82008 10.6595 10.1951 10.4345 10.4201L10.4347 10.42Z" fill="#203451"></path></svg></button>
+								</div>
+							</div>
+							<div>
+								<div class="wrp_select_currency">
+									<div class="currency_selected">
+										<div class="balance_icon balance_icon_all">
+											<img src="svg/currency/payment_all.svg" alt="">
+										</div>
+										<span data-title="Валюта" data-icon="/svg/currency/payment_all.svg">Валюта</span>
+										<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.49998 8C6.26699 8 6.03403 7.90396 5.8564 7.71229L0.266684 1.67776C-0.0888948 1.29388 -0.0888948 0.671503 0.266684 0.287787C0.62212 -0.095929 1.19852 -0.095929 1.55412 0.287787L6.49998 5.62748L11.4459 0.287973C11.8014 -0.0957425 12.3778 -0.0957425 12.7332 0.287973C13.0889 0.67169 13.0889 1.29407 12.7332 1.67794L7.14355 7.71248C6.96584 7.90418 6.73288 8 6.49998 8Z" fill="#9FA8B1"></path></svg>
+										<input type="hidden" name="ps" value="" autocomplete="off">
+									</div>
+									<div class="currency_list">
+										<ul class="custom_scroll">
+											<li data-id="0">
+												<div class="balance_icon balance_icon_all">
+													<img src="svg/currency/payment_all.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>Все</b>
+												</div>
+											</li>
+																<li data-id="10">
+												<div class="balance_icon">
+													<img src="svg/currency/btc.svg" alt="">
+																			</div>
+												<div class="fs-14">
+													<b>Bitcoin</b>
+													<span class="fw-500 color-gray">BTC</span>
+												</div>
+											</li>
+																<li data-id="201">
+												<div class="balance_icon">
+													<img src="svg/currency/btc.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/bep20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>Bitcoin (BEP20)</b>
+													<span class="fw-500 color-gray">BTC</span>
+												</div>
+											</li>
+																<li data-id="30">
+												<div class="balance_icon">
+													<img src="svg/currency/ltc.svg" alt="">
+																			</div>
+												<div class="fs-14">
+													<b>Litecoin</b>
+													<span class="fw-500 color-gray">LTC</span>
+												</div>
+											</li>
+																<li data-id="50">
+												<div class="balance_icon">
+													<img src="svg/currency/bch.svg" alt="">
+																			</div>
+												<div class="fs-14">
+													<b>Bitcoin Cash</b>
+													<span class="fw-500 color-gray">BCH</span>
+												</div>
+											</li>
+																<li data-id="20">
+												<div class="balance_icon">
+													<img src="svg/currency/eth.svg" alt="">
+																			</div>
+												<div class="fs-14">
+													<b>Ethereum</b>
+													<span class="fw-500 color-gray">ETH</span>
+												</div>
+											</li>
+																<li data-id="202">
+												<div class="balance_icon">
+													<img src="svg/currency/eth.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/bep20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>Ethereum (BEP20)</b>
+													<span class="fw-500 color-gray">ETH</span>
+												</div>
+											</li>
+																<li data-id="40">
+												<div class="balance_icon">
+													<img src="svg/currency/doge.svg" alt="">
+																			</div>
+												<div class="fs-14">
+													<b>Dogecoin</b>
+													<span class="fw-500 color-gray">DOGE</span>
+												</div>
+											</li>
+																<li data-id="90">
+												<div class="balance_icon">
+													<img src="svg/currency/trx.svg" alt="">
+																			</div>
+												<div class="fs-14">
+													<b>Tron</b>
+													<span class="fw-500 color-gray">TRX</span>
+												</div>
+											</li>
+																<li data-id="70">
+												<div class="balance_icon">
+													<img src="svg/currency/usdt.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/erc20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>Tether (ERC20)</b>
+													<span class="fw-500 color-gray">USDT</span>
+												</div>
+											</li>
+																<li data-id="71">
+												<div class="balance_icon">
+													<img src="svg/currency/usdt.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/trc20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>Tether (TRC20)</b>
+													<span class="fw-500 color-gray">USDT</span>
+												</div>
+											</li>
+																<li data-id="72">
+												<div class="balance_icon">
+													<img src="svg/currency/usdt.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/bep20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>Tether (BEP20)</b>
+													<span class="fw-500 color-gray">USDT</span>
+												</div>
+											</li>
+																<li data-id="130">
+												<div class="balance_icon">
+													<img src="svg/currency/bnb.svg" alt="">
+																			</div>
+												<div class="fs-14">
+													<b>Binance Coin (BSC)</b>
+													<span class="fw-500 color-gray">BNB</span>
+												</div>
+											</li>
+																<li data-id="110">
+												<div class="balance_icon">
+													<img src="svg/currency/busd.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/erc20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>BUSD (ERC20)</b>
+													<span class="fw-500 color-gray">BUSD</span>
+												</div>
+											</li>
+																<li data-id="203">
+												<div class="balance_icon">
+													<img src="svg/currency/busd.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/bep20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>BUSD (BEP20)</b>
+													<span class="fw-500 color-gray">BUSD</span>
+												</div>
+											</li>
+																<li data-id="100">
+												<div class="balance_icon">
+													<img src="svg/currency/usdc.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/erc20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>USD Coin (ERC20)</b>
+													<span class="fw-500 color-gray">USDC</span>
+												</div>
+											</li>
+																<li data-id="101">
+												<div class="balance_icon">
+													<img src="svg/currency/usdc.svg" alt="">
+																				<div class="currency_icon_net">
+														<img src="svg/currency/bep20.svg" alt="">
+													</div>
+																			</div>
+												<div class="fs-14">
+													<b>USD Coin (BEP20)</b>
+													<span class="fw-500 color-gray">USDC</span>
+												</div>
+											</li>
+															</ul>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="wrp_select_currency">
+									<div class="currency_selected" style="--x: 151.04998779296875px; --y: 33px;">
+										<div class="balance_icon balance_icon_all">
+											<img src="svg/type_all.svg" alt="">
+										</div>
+										<span data-title="Операция" data-icon="/svg/type_all.svg">Операция</span>
+										<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.49998 8C6.26699 8 6.03403 7.90396 5.8564 7.71229L0.266684 1.67776C-0.0888948 1.29388 -0.0888948 0.671503 0.266684 0.287787C0.62212 -0.095929 1.19852 -0.095929 1.55412 0.287787L6.49998 5.62748L11.4459 0.287973C11.8014 -0.0957425 12.3778 -0.0957425 12.7332 0.287973C13.0889 0.67169 13.0889 1.29407 12.7332 1.67794L7.14355 7.71248C6.96584 7.90418 6.73288 8 6.49998 8Z" fill="#9FA8B1"></path></svg>
+										<input type="hidden" name="type" value="" autocomplete="off">
+									</div>
+									<div class="currency_list">
+										<ul class="custom_scroll">
+											<li data-id="0">
+												<div class="balance_icon balance_icon_all">
+													<img src="svg/type_all.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>Все</b>
+												</div>
+											</li>
+											<li data-id="enter">
+												<div class="balance_icon">
+													<img src="svg/icon_type_deposit.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>Пополнение</b>
+												</div>
+											</li>
+											<li data-id="withdraw">
+												<div class="balance_icon">
+													<img src="svg/icon_type_withdraw.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>Вывод</b>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="input wrp_calendar" style="--x: 38.75px; --y: 3px;">
+									<input type="text" name="date" value="" placeholder="Дата" autocomplete="off" class="datepicker icon_calendar hasDatepicker" id="dp1675440193449">
+								</div>
+							</div>
+								<div>
+								<div class="wrp_select_currency">
+									<div class="currency_selected">
+										<div class="balance_icon balance_icon_all">
+											<img src="svg/platform_all.svg" alt="">
+										</div>
+										<span data-title="Платформа" data-icon="/svg/platform_all.svg">Платформа</span>
+										<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.49998 8C6.26699 8 6.03403 7.90396 5.8564 7.71229L0.266684 1.67776C-0.0888948 1.29388 -0.0888948 0.671503 0.266684 0.287787C0.62212 -0.095929 1.19852 -0.095929 1.55412 0.287787L6.49998 5.62748L11.4459 0.287973C11.8014 -0.0957425 12.3778 -0.0957425 12.7332 0.287973C13.0889 0.67169 13.0889 1.29407 12.7332 1.67794L7.14355 7.71248C6.96584 7.90418 6.73288 8 6.49998 8Z" fill="#9FA8B1"></path></svg>
+										<input type="hidden" name="platform" value="" autocomplete="off">
+									</div>
+									<div class="currency_list">
+										<ul class="custom_scroll">
+											<li data-id="0">
+												<div class="balance_icon balance_icon_all">
+													<img src="svg/platform_all.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>Все</b>
+												</div>
+											</li>
+																<li data-id="5">
+												<div class="balance_icon">
+																				<img src="data:image/jpeg;base64,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" alt="">
+																			</div>
+												<div class="fs-14">
+													<b>passimpay</b>
+												</div>
+											</li>
+															</ul>
+									</div>
+								</div>
+							</div>
+								<div>
+								<div class="wrp_select_currency">
+									<div class="currency_selected">
+										<div class="balance_icon balance_icon_all">
+											<img src="svg/status_all.svg" alt="">
+										</div>
+										<span data-title="Статус" data-icon="/svg/status_all.svg">Статус</span>
+										<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.49998 8C6.26699 8 6.03403 7.90396 5.8564 7.71229L0.266684 1.67776C-0.0888948 1.29388 -0.0888948 0.671503 0.266684 0.287787C0.62212 -0.095929 1.19852 -0.095929 1.55412 0.287787L6.49998 5.62748L11.4459 0.287973C11.8014 -0.0957425 12.3778 -0.0957425 12.7332 0.287973C13.0889 0.67169 13.0889 1.29407 12.7332 1.67794L7.14355 7.71248C6.96584 7.90418 6.73288 8 6.49998 8Z" fill="#9FA8B1"></path></svg>
+										<input type="hidden" name="status" value="" autocomplete="off">
+									</div>
+									<div class="currency_list">
+										<ul class="custom_scroll">
+											<li data-id="0">
+												<div class="balance_icon balance_icon_all">
+													<img src="svg/status_all.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>Все</b>
+												</div>
+											</li>
+											<li data-id="3">
+												<div class="balance_icon">
+													<img src="svg/history_status1.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>В работе</b>
+												</div>
+											</li>
+											<li data-id="1">
+												<div class="balance_icon">
+													<img src="svg/history_status2.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>Завершено</b>
+												</div>
+											</li>
+											<li data-id="2">
+												<div class="balance_icon">
+													<img src="svg/history_status4.svg" alt="">
+												</div>
+												<div class="fs-14">
+													<b>Ошибка</b>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+							</div>
 					<div class="transaction-chart mb-50">
 						<div class="transaction-chart__create item_transaction">
 							<form action="#" method="post">
@@ -1803,18 +2134,24 @@
 									<div class="fs-16 fw-700">Создать счет</div>
 									<div class="item_transaction__link fs-12 fw-500 color-blue2">Как создать счет?</div>
 								</div>
-								<div class="fs-12 fw-500 mb-5">Сумма оплаты</div>
-								<div class="input_inner mb-20">
-									<input class="filled" type="text" name="title"  required="" autocomplete="off" placeholder="0">
-								</div>
-								<div class="fs-12 fw-500 mb-5">Выбрать проект</div>
-								<div class="input_inner mb-20">
-									<div class="filled transaction-chart__dropdown">wildberries</div>
-									<div id="dropdown-transaction" class="dropdown-content">
-										<div>wildberries1</div>
-										<div>wildberries2</div>
-										<div>wildberries3</div>
-									  </div>
+								<div class="flex">
+									<div>
+										<div class="fs-12 fw-500 mb-5">Сумма оплаты</div>
+										<div class="input_inner mb-20">
+											<input class="filled" type="text" name="title"  required="" autocomplete="off" placeholder="0">
+										</div>
+									</div>
+									<div>
+										<div class="fs-12 fw-500 mb-5">Выбрать проект</div>
+										<div class="input_inner mb-20">
+											<div class="filled transaction-chart__dropdown">wildberries</div>
+											<div id="dropdown-transaction" class="dropdown-content">
+												<div>wildberries1</div>
+												<div>wildberries2</div>
+												<div>wildberries3</div>
+											  </div>
+										</div>
+									</div>
 								</div>
 												
 								<button data-modal="create-bill" class="btn2" type="submit">Сохранить</button>
