@@ -2634,7 +2634,6 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     max-height: 0px;
     width: 250px;
     overflow-y: auto;
-    padding: 10px;
     background: #FFFFFF;
     opacity: 0;
 
@@ -2644,20 +2643,24 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     border-radius: 10px;
     transform: translate(0px, 5px);
     transition: all 300ms ease;
+    margin: 0px;
+    padding: 0px;
 }
 
 .wallets__items__transaction .wallets__show__hover:hover + .wallets__slide{
-    display: block !important;
+    display: block;
     z-index: 10 !important;
     opacity: 1; 
     max-height: 292px;
+    padding: 10px;
 }
 
 .wallets__items__transaction .wallets__item .wallets__slide:hover{
-    display: block !important;
+    display: block;
     z-index: 10 !important;
     opacity: 1; 
     max-height: 292px;
+    padding: 10px;
 }
 
 .slide-wallets__input .wallets__balance{
@@ -2717,6 +2720,9 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
     overflow-x: hidden !important;
 }
 
+.word-wrap{
+    word-wrap: break-word;
+}
 
 
 @media only screen and (max-width: 1800px){
@@ -2772,6 +2778,10 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
     .wallets__items__transaction .wallets__show + .wallets__slide{
         display: none !important;
+    }
+
+    .wallets__items__transaction .wallets__slide{
+        padding: 10px;
     }
     
 }
