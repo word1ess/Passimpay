@@ -19,6 +19,7 @@
 	<link href="css/account-custom.css?144" rel="stylesheet" />
 	<link href="css/account-media.css?144" rel="stylesheet" />
 	<link href="css/account-new.css" rel="stylesheet" />
+	<link href="css/swiper-bundle.min.css" rel="stylesheet" />
 
 	<link rel="manifest" href="/manifest.json">
 
@@ -5391,13 +5392,11 @@
 																	</div>
 																</div>
 																<div class="volatility__range mb-15">
-																	<div>Вернуть активы, если ставки упадут ниже:</div>
-																	<div>
-																		<input class="range" type="range" value="0"
-																			min="0" max="1000"
-																			onChange="rangeSlide(this.value)"
-																			onmousemove="rangeSlide(this.value)"></input>
-																		<span id="rangeValue">0</span>
+																	<div class="flex_between_center">Вернуть активы, если ставки упадут ниже:</div>
+																	<div class="flex_between_center">
+																		<div id="range-slide">
+																		</div>
+																		<span id="range-slide-text">0</span>
 																	</div>
 																</div>
 																<ul>
@@ -8469,6 +8468,24 @@
 			<div class="btn2">Сохранить изменения</div>
 		</div>
 	</div>
+
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery-ui-slider.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+
+	<script type="text/javascript">
+		$("#range-slide").slider({
+			animate: "slow",
+			range: "min",    
+			value: 50,
+			slide : function(event, ui) {    
+				$("#range-slide-text").text(ui.value);        
+			}
+		});
+		$( "#range-slide-text" ).text($( "#range-slide" ).slider( "value" ));    
+	</script>
 
 	<script src="js/dashboard-popup.js"></script>
 
