@@ -215,17 +215,10 @@ function click(parent, children) {
 const walletsHoverParent = Array.from(
   document.querySelectorAll(".wallets__show__hover")
 );
-const walletsHoverChildren = Array.from(
-  document.querySelectorAll(".wallets__slide")
-);
 
-if (walletsHoverParent) {
-  walletsHoverParent.forEach((perant) => {
-    let index = walletsHoverParent.indexOf(perant);
-    hover(perant, walletsHoverChildren[index]);
-  });
-  walletsHoverChildren.forEach((el) => {
-    hover(el, el);
+if (walletsHoverParent && window.screen.width < 992) {
+  walletsHoverParent.forEach((el) => {
+    // el.classList.add("wallets__show");
   });
 }
 
@@ -243,6 +236,8 @@ if (slideWalletsInput[0]) {
         this.classList.toggle("active");
         this.parentElement.previousElementSibling.classList.add("active");
         if (slideWalletsInput.every((el) => !el.classList.contains("active"))) {
+          console.log("123");
+
           this.parentElement.previousElementSibling.classList.remove("active");
         }
       }
