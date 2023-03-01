@@ -1800,6 +1800,7 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 }
 
 
+
 .table-slide td div{
     max-height: 0px;
     box-sizing: border-box;
@@ -2747,6 +2748,10 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .table-transaction tr td:nth-child(6){
+        max-width: calc(116px + 85px) !important;
+    }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -2764,6 +2769,9 @@ background: url('data:image/svg+xml;utf8,<svg width="29" height="44" viewBox="0 
 
     .transaction-chart .flex div{
         flex: 1 1 50%;
+    }
+    .table-transaction tr td:nth-child(6){
+        max-width: calc(116px + 25px) !important;
     }
 }
 
